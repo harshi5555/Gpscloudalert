@@ -32,7 +32,7 @@ public class GeofenceTrasitionIntentService extends IntentService {
     public GeofenceTrasitionIntentService() {
         super(TAG);
     }
-
+// test
     @Override
     protected void onHandleIntent(Intent intent) {
         GeofencingEvent geofencingEvent = GeofencingEvent.fromIntent(intent);
