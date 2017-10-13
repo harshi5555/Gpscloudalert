@@ -1,0 +1,10 @@
+[
+    {
+        "merged": "/Users/harshi/AndroidStudioProjects/Gpscloudalert/app/build/intermediates/res/merged/debug/drawable-hdpi/warning_icon.png",
+        "source": "/Users/harshi/AndroidStudioProjects/Gpscloudalert/app/src/main/res/drawable-hdpi/warning_icon.png"
+    },
+    {
+        "merged": "/Users/harshi/AndroidStudioProjects/Gpscloudalert/app/build/intermediates/res/merged/debug/drawable-hdpi/ic_action_location.png",
+        "source": "/Users/harshi/AndroidStudioProjects/Gpscloudalert/app/src/main/res/drawable-hdpi/ic_action_location.png"
+    }
+]

@@ -1,0 +1,102 @@
+[
+    {
+        "merged": "/Users/harshi/AndroidStudioProjects/Gpscloudalert/app/build/intermediates/res/merged/debug/color/abc_hint_foreground_material_light.xml",
+        "source": "/Users/harshi/.android/build-cache/5843078c7de83ac742d0c6fec6ad6915fcc93c32/output/res/color/abc_hint_foreground_material_light.xml"
+    },
+    {
+        "merged": "/Users/harshi/AndroidStudioProjects/Gpscloudalert/app/build/intermediates/res/merged/debug/color/abc_secondary_text_material_light.xml",
+        "source": "/Users/harshi/.android/build-cache/5843078c7de83ac742d0c6fec6ad6915fcc93c32/output/res/color/abc_secondary_text_material_light.xml"
+    },
+    {
+        "merged": "/Users/harshi/AndroidStudioProjects/Gpscloudalert/app/build/intermediates/res/merged/debug/color/abc_primary_text_disable_only_material_dark.xml",
+        "source": "/Users/harshi/.android/build-cache/5843078c7de83ac742d0c6fec6ad6915fcc93c32/output/res/color/abc_primary_text_disable_only_material_dark.xml"
+    },
+    {
+        "merged": "/Users/harshi/AndroidStudioProjects/Gpscloudalert/app/build/intermediates/res/merged/debug/color/switch_thumb_material_light.xml",
+        "source": "/Users/harshi/.android/build-cache/5843078c7de83ac742d0c6fec6ad6915fcc93c32/output/res/color/switch_thumb_material_light.xml"
+    },
+    {
+        "merged": "/Users/harshi/AndroidStudioProjects/Gpscloudalert/app/build/intermediates/res/merged/debug/color/wallet_primary_text_holo_light.xml",
+        "source": "/Users/harshi/.android/build-cache/d39ca28ab2434f6483bd68cd32f9c6d5ab527ddd/output/res/color/wallet_primary_text_holo_light.xml"
+    },
+    {
+        "merged": "/Users/harshi/AndroidStudioProjects/Gpscloudalert/app/build/intermediates/res/merged/debug/color/switch_thumb_material_dark.xml",
+        "source": "/Users/harshi/.android/build-cache/5843078c7de83ac742d0c6fec6ad6915fcc93c32/output/res/color/switch_thumb_material_dark.xml"
+    },
+    {
+        "merged": "/Users/harshi/AndroidStudioProjects/Gpscloudalert/app/build/intermediates/res/merged/debug/color/abc_search_url_text.xml",
+        "source": "/Users/harshi/.android/build-cache/5843078c7de83ac742d0c6fec6ad6915fcc93c32/output/res/color/abc_search_url_text.xml"
+    },
+    {
+        "merged": "/Users/harshi/AndroidStudioProjects/Gpscloudalert/app/build/intermediates/res/merged/debug/color/abc_tint_seek_thumb.xml",
+        "source": "/Users/harshi/.android/build-cache/5843078c7de83ac742d0c6fec6ad6915fcc93c32/output/res/color/abc_tint_seek_thumb.xml"
+    },
+    {
+        "merged": "/Users/harshi/AndroidStudioProjects/Gpscloudalert/app/build/intermediates/res/merged/debug/color/abc_primary_text_disable_only_material_light.xml",
+        "source": "/Users/harshi/.android/build-cache/5843078c7de83ac742d0c6fec6ad6915fcc93c32/output/res/color/abc_primary_text_disable_only_material_light.xml"
+    },
+    {
+        "merged": "/Users/harshi/AndroidStudioProjects/Gpscloudalert/app/build/intermediates/res/merged/debug/color/abc_tint_switch_track.xml",
+        "source": "/Users/harshi/.android/build-cache/5843078c7de83ac742d0c6fec6ad6915fcc93c32/output/res/color/abc_tint_switch_track.xml"
+    },
+    {
+        "merged": "/Users/harshi/AndroidStudioProjects/Gpscloudalert/app/build/intermediates/res/merged/debug/color/abc_btn_colored_borderless_text_material.xml",
+        "source": "/Users/harshi/.android/build-cache/5843078c7de83ac742d0c6fec6ad6915fcc93c32/output/res/color/abc_btn_colored_borderless_text_material.xml"
+    },
+    {
+        "merged": "/Users/harshi/AndroidStudioProjects/Gpscloudalert/app/build/intermediates/res/merged/debug/color/abc_tint_switch_thumb.xml",
+        "source": "/Users/harshi/.android/build-cache/5843078c7de83ac742d0c6fec6ad6915fcc93c32/output/res/color/abc_tint_switch_thumb.xml"
+    },
+    {
+        "merged": "/Users/harshi/AndroidStudioProjects/Gpscloudalert/app/build/intermediates/res/merged/debug/color/abc_tint_spinner.xml",
+        "source": "/Users/harshi/.android/build-cache/5843078c7de83ac742d0c6fec6ad6915fcc93c32/output/res/color/abc_tint_spinner.xml"
+    },
+    {
+        "merged": "/Users/harshi/AndroidStudioProjects/Gpscloudalert/app/build/intermediates/res/merged/debug/color/abc_primary_text_material_light.xml",
+        "source": "/Users/harshi/.android/build-cache/5843078c7de83ac742d0c6fec6ad6915fcc93c32/output/res/color/abc_primary_text_material_light.xml"
+    },
+    {
+        "merged": "/Users/harshi/AndroidStudioProjects/Gpscloudalert/app/build/intermediates/res/merged/debug/color/abc_hint_foreground_material_dark.xml",
+        "source": "/Users/harshi/.android/build-cache/5843078c7de83ac742d0c6fec6ad6915fcc93c32/output/res/color/abc_hint_foreground_material_dark.xml"
+    },
+    {
+        "merged": "/Users/harshi/AndroidStudioProjects/Gpscloudalert/app/build/intermediates/res/merged/debug/color/abc_tint_edittext.xml",
+        "source": "/Users/harshi/.android/build-cache/5843078c7de83ac742d0c6fec6ad6915fcc93c32/output/res/color/abc_tint_edittext.xml"
+    },
+    {
+        "merged": "/Users/harshi/AndroidStudioProjects/Gpscloudalert/app/build/intermediates/res/merged/debug/color/abc_btn_colored_text_material.xml",
+        "source": "/Users/harshi/.android/build-cache/5843078c7de83ac742d0c6fec6ad6915fcc93c32/output/res/color/abc_btn_colored_text_material.xml"
+    },
+    {
+        "merged": "/Users/harshi/AndroidStudioProjects/Gpscloudalert/app/build/intermediates/res/merged/debug/color/common_google_signin_btn_text_dark.xml",
+        "source": "/Users/harshi/.android/build-cache/51a6ae56396ec9231f0dad7988028915ad16c1c5/output/res/color/common_google_signin_btn_text_dark.xml"
+    },
+    {
+        "merged": "/Users/harshi/AndroidStudioProjects/Gpscloudalert/app/build/intermediates/res/merged/debug/color/common_google_signin_btn_tint.xml",
+        "source": "/Users/harshi/.android/build-cache/51a6ae56396ec9231f0dad7988028915ad16c1c5/output/res/color/common_google_signin_btn_tint.xml"
+    },
+    {
+        "merged": "/Users/harshi/AndroidStudioProjects/Gpscloudalert/app/build/intermediates/res/merged/debug/color/abc_secondary_text_material_dark.xml",
+        "source": "/Users/harshi/.android/build-cache/5843078c7de83ac742d0c6fec6ad6915fcc93c32/output/res/color/abc_secondary_text_material_dark.xml"
+    },
+    {
+        "merged": "/Users/harshi/AndroidStudioProjects/Gpscloudalert/app/build/intermediates/res/merged/debug/color/wallet_secondary_text_holo_dark.xml",
+        "source": "/Users/harshi/.android/build-cache/d39ca28ab2434f6483bd68cd32f9c6d5ab527ddd/output/res/color/wallet_secondary_text_holo_dark.xml"
+    },
+    {
+        "merged": "/Users/harshi/AndroidStudioProjects/Gpscloudalert/app/build/intermediates/res/merged/debug/color/common_google_signin_btn_text_light.xml",
+        "source": "/Users/harshi/.android/build-cache/51a6ae56396ec9231f0dad7988028915ad16c1c5/output/res/color/common_google_signin_btn_text_light.xml"
+    },
+    {
+        "merged": "/Users/harshi/AndroidStudioProjects/Gpscloudalert/app/build/intermediates/res/merged/debug/color/abc_primary_text_material_dark.xml",
+        "source": "/Users/harshi/.android/build-cache/5843078c7de83ac742d0c6fec6ad6915fcc93c32/output/res/color/abc_primary_text_material_dark.xml"
+    },
+    {
+        "merged": "/Users/harshi/AndroidStudioProjects/Gpscloudalert/app/build/intermediates/res/merged/debug/color/abc_tint_btn_checkable.xml",
+        "source": "/Users/harshi/.android/build-cache/5843078c7de83ac742d0c6fec6ad6915fcc93c32/output/res/color/abc_tint_btn_checkable.xml"
+    },
+    {
+        "merged": "/Users/harshi/AndroidStudioProjects/Gpscloudalert/app/build/intermediates/res/merged/debug/color/abc_tint_default.xml",
+        "source": "/Users/harshi/.android/build-cache/5843078c7de83ac742d0c6fec6ad6915fcc93c32/output/res/color/abc_tint_default.xml"
+    }
+]

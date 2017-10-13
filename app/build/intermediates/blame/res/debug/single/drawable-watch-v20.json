@@ -1,0 +1,14 @@
+[
+    {
+        "merged": "/Users/harshi/AndroidStudioProjects/Gpscloudalert/app/build/intermediates/res/merged/debug/drawable-watch-v20/common_google_signin_btn_text_light_normal.xml",
+        "source": "/Users/harshi/.android/build-cache/1fdb70dca45d383efd9f09c9c699c062ededf799/output/res/drawable-watch-v20/common_google_signin_btn_text_light_normal.xml"
+    },
+    {
+        "merged": "/Users/harshi/AndroidStudioProjects/Gpscloudalert/app/build/intermediates/res/merged/debug/drawable-watch-v20/common_google_signin_btn_text_disabled.xml",
+        "source": "/Users/harshi/.android/build-cache/1fdb70dca45d383efd9f09c9c699c062ededf799/output/res/drawable-watch-v20/common_google_signin_btn_text_disabled.xml"
+    },
+    {
+        "merged": "/Users/harshi/AndroidStudioProjects/Gpscloudalert/app/build/intermediates/res/merged/debug/drawable-watch-v20/common_google_signin_btn_text_dark_normal.xml",
+        "source": "/Users/harshi/.android/build-cache/1fdb70dca45d383efd9f09c9c699c062ededf799/output/res/drawable-watch-v20/common_google_signin_btn_text_dark_normal.xml"
+    }
+]

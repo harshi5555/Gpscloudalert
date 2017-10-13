@@ -1,0 +1,18 @@
+[
+    {
+        "merged": "/Users/harshi/AndroidStudioProjects/Gpscloudalert/app/build/intermediates/res/merged/debug/drawable-v21/abc_edit_text_material.xml",
+        "source": "/Users/harshi/.android/build-cache/5843078c7de83ac742d0c6fec6ad6915fcc93c32/output/res/drawable-v21/abc_edit_text_material.xml"
+    },
+    {
+        "merged": "/Users/harshi/AndroidStudioProjects/Gpscloudalert/app/build/intermediates/res/merged/debug/drawable-v21/notification_action_background.xml",
+        "source": "/Users/harshi/.android/build-cache/5843078c7de83ac742d0c6fec6ad6915fcc93c32/output/res/drawable-v21/notification_action_background.xml"
+    },
+    {
+        "merged": "/Users/harshi/AndroidStudioProjects/Gpscloudalert/app/build/intermediates/res/merged/debug/drawable-v21/abc_action_bar_item_background_material.xml",
+        "source": "/Users/harshi/.android/build-cache/5843078c7de83ac742d0c6fec6ad6915fcc93c32/output/res/drawable-v21/abc_action_bar_item_background_material.xml"
+    },
+    {
+        "merged": "/Users/harshi/AndroidStudioProjects/Gpscloudalert/app/build/intermediates/res/merged/debug/drawable-v21/abc_btn_colored_material.xml",
+        "source": "/Users/harshi/.android/build-cache/5843078c7de83ac742d0c6fec6ad6915fcc93c32/output/res/drawable-v21/abc_btn_colored_material.xml"
+    }
+]

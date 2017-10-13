@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Gps cloud alert</string>
+    <string name="title_activity_maps">Map</string>
+    <string name="gecordinateKey"><![CDATA[https://maps.googleapis.com/maps/api/geocode/json?latlng=59.3359617,18.0578267&key=AIzaSyAcYnwjEFnhxHt3Z5xASke3w1KhFRtfnm4]]></string>
+</resources>

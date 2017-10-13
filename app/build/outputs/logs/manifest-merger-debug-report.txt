@@ -1,0 +1,470 @@
+-- Merging decision tree log ---
+manifest
+ADDED from /Users/harshi/AndroidStudioProjects/Gpscloudalert/app/src/main/AndroidManifest.xml:2:1-58:12
+	package
+		ADDED from /Users/harshi/AndroidStudioProjects/Gpscloudalert/app/src/main/AndroidManifest.xml:3:5-32
+		INJECTED from /Users/harshi/AndroidStudioProjects/Gpscloudalert/app/src/main/AndroidManifest.xml
+		INJECTED from /Users/harshi/AndroidStudioProjects/Gpscloudalert/app/src/main/AndroidManifest.xml
+	android:versionName
+		INJECTED from /Users/harshi/AndroidStudioProjects/Gpscloudalert/app/src/main/AndroidManifest.xml
+		INJECTED from /Users/harshi/AndroidStudioProjects/Gpscloudalert/app/src/main/AndroidManifest.xml
+	xmlns:android
+		ADDED from /Users/harshi/AndroidStudioProjects/Gpscloudalert/app/src/main/AndroidManifest.xml:2:11-69
+	android:versionCode
+		INJECTED from /Users/harshi/AndroidStudioProjects/Gpscloudalert/app/src/main/AndroidManifest.xml
+		INJECTED from /Users/harshi/AndroidStudioProjects/Gpscloudalert/app/src/main/AndroidManifest.xml
+uses-permission#android.permission.ACCESS_FINE_LOCATION
+ADDED from /Users/harshi/AndroidStudioProjects/Gpscloudalert/app/src/main/AndroidManifest.xml:10:5-79
+	android:name
+		ADDED from /Users/harshi/AndroidStudioProjects/Gpscloudalert/app/src/main/AndroidManifest.xml:10:22-76
+uses-permission#android.permission.VIBRATE
+ADDED from /Users/harshi/AndroidStudioProjects/Gpscloudalert/app/src/main/AndroidManifest.xml:11:5-65
+	android:name
+		ADDED from /Users/harshi/AndroidStudioProjects/Gpscloudalert/app/src/main/AndroidManifest.xml:11:22-63
+uses-feature#android.hardware.location.network
+ADDED from /Users/harshi/AndroidStudioProjects/Gpscloudalert/app/src/main/AndroidManifest.xml:12:5-70
+	android:name
+		ADDED from /Users/harshi/AndroidStudioProjects/Gpscloudalert/app/src/main/AndroidManifest.xml:12:19-67
+uses-feature#android.hardware.location.gps
+ADDED from /Users/harshi/AndroidStudioProjects/Gpscloudalert/app/src/main/AndroidManifest.xml:13:5-66
+	android:name
+		ADDED from /Users/harshi/AndroidStudioProjects/Gpscloudalert/app/src/main/AndroidManifest.xml:13:19-63
+uses-permission#android.permission.ACCESS_COARSE_LOCATION
+ADDED from /Users/harshi/AndroidStudioProjects/Gpscloudalert/app/src/main/AndroidManifest.xml:15:5-81
+	android:name
+		ADDED from /Users/harshi/AndroidStudioProjects/Gpscloudalert/app/src/main/AndroidManifest.xml:15:22-78
+uses-permission#android.permission.INTERNET
+ADDED from /Users/harshi/AndroidStudioProjects/Gpscloudalert/app/src/main/AndroidManifest.xml:16:5-67
+MERGED from [com.google.android.gms:play-services-ads-lite:11.0.4] /Users/harshi/.android/build-cache/e262320ba3c398cdfddd42efd01418b7feaeaaed/output/AndroidManifest.xml:19:5-66
+MERGED from [com.google.android.gms:play-services-analytics:11.0.4] /Users/harshi/.android/build-cache/ff4756d9ae17595f493abc14f53b2465301c0da9/output/AndroidManifest.xml:20:5-66
+MERGED from [com.google.android.gms:play-services-appinvite:11.0.4] /Users/harshi/.android/build-cache/f020c81ebc13fca7edb962205cc267786f86d146/output/AndroidManifest.xml:18:5-66
+MERGED from [com.google.firebase:firebase-crash:11.0.4] /Users/harshi/.android/build-cache/771ad4f5c2f29649790acfa3e24522ccd92c1ac9/output/AndroidManifest.xml:18:5-66
+MERGED from [com.google.android.gms:play-services-gcm:11.0.4] /Users/harshi/.android/build-cache/c38cc688dff38aaf03112d6f7cde9afda42bd909/output/AndroidManifest.xml:21:5-66
+MERGED from [com.google.android.gms:play-services-iid:11.0.4] /Users/harshi/.android/build-cache/622d462e775185fbdc272d8f68c222ed5770c78c/output/AndroidManifest.xml:21:5-66
+MERGED from [com.google.android.gms:play-services-tagmanager-api:11.0.4] /Users/harshi/.android/build-cache/cb02e64f27f4eca91e1afcd951806cffcbd24695/output/AndroidManifest.xml:20:5-66
+MERGED from [com.google.firebase:firebase-analytics:11.0.4] /Users/harshi/.android/build-cache/05def36407498d6a2845f204dc433841a3aa564f/output/AndroidManifest.xml:20:5-66
+MERGED from [com.google.firebase:firebase-analytics-impl:11.0.4] /Users/harshi/.android/build-cache/d69607f3a2e909506425ec55410018d6e5af8473/output/AndroidManifest.xml:20:5-66
+MERGED from [com.google.firebase:firebase-iid:11.0.4] /Users/harshi/.android/build-cache/1c427f2518b86ff027a972dd2dc32cfc1798297a/output/AndroidManifest.xml:20:5-66
+MERGED from [com.google.android.gms:play-services-analytics-impl:11.0.4] /Users/harshi/.android/build-cache/f9252ad3e14d7e105b73fe8189f258f4c062d21e/output/AndroidManifest.xml:20:5-66
+MERGED from [com.google.android.gms:play-services-maps:11.0.4] /Users/harshi/.android/build-cache/2edbb2868c64cd3b2f35be414db6949fa602c6b2/output/AndroidManifest.xml:20:5-66
+	android:name
+		ADDED from /Users/harshi/AndroidStudioProjects/Gpscloudalert/app/src/main/AndroidManifest.xml:16:22-64
+application
+ADDED from /Users/harshi/AndroidStudioProjects/Gpscloudalert/app/src/main/AndroidManifest.xml:18:5-56:19
+MERGED from [com.google.android.gms:play-services:11.0.4] /Users/harshi/.android/build-cache/01acc04813641c11fcc39c919713211ad239ef82/output/AndroidManifest.xml:5:5-20
+MERGED from [com.google.android.gms:play-services-ads-lite:11.0.4] /Users/harshi/.android/build-cache/e262320ba3c398cdfddd42efd01418b7feaeaaed/output/AndroidManifest.xml:23:5-26:19
+MERGED from [com.google.android.gms:play-services-analytics:11.0.4] /Users/harshi/.android/build-cache/ff4756d9ae17595f493abc14f53b2465301c0da9/output/AndroidManifest.xml:26:5-19
+MERGED from [com.google.android.gms:play-services-appinvite:11.0.4] /Users/harshi/.android/build-cache/f020c81ebc13fca7edb962205cc267786f86d146/output/AndroidManifest.xml:19:5-26:19
+MERGED from [com.google.android.gms:play-services-auth:11.0.4] /Users/harshi/.android/build-cache/1fdb70dca45d383efd9f09c9c699c062ededf799/output/AndroidManifest.xml:19:5-25:19
+MERGED from [com.google.android.gms:play-services-cast-framework:11.0.4] /Users/harshi/.android/build-cache/557fd10f050c31d73006445f8a62781c3ba289bd/output/AndroidManifest.xml:4:5-8:19
+MERGED from [com.google.android.gms:play-services-cast:11.0.4] /Users/harshi/.android/build-cache/ad13ffdb40e50ba4482a9cf4d153b818e99cd73c/output/AndroidManifest.xml:18:5-19
+MERGED from [com.android.support:mediarouter-v7:25.2.0] /Users/harshi/.android/build-cache/51a0ed343fc1ca849d9fa9df70451745dfb09766/output/AndroidManifest.xml:22:5-20
+MERGED from [com.android.support:appcompat-v7:25.2.0] /Users/harshi/.android/build-cache/5843078c7de83ac742d0c6fec6ad6915fcc93c32/output/AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:animated-vector-drawable:25.2.0] /Users/harshi/.android/build-cache/c577885eefeaee95bb92de877740e13f59e35413/output/AndroidManifest.xml:22:5-20
+MERGED from [com.android.support:support-vector-drawable:25.2.0] /Users/harshi/.android/build-cache/3244c3d6858bcf78a7eab3bbf755b683c0c59b81/output/AndroidManifest.xml:23:5-20
+MERGED from [com.android.support:palette-v7:25.2.0] /Users/harshi/.android/build-cache/ef403557242945a4a15ff8d15cb32845d34e538d/output/AndroidManifest.xml:22:5-23:19
+MERGED from [com.google.android.gms:play-services-clearcut:11.0.4] /Users/harshi/.android/build-cache/53c08dc4b26f76cad0a1e3a6cd13b0e355da47bc/output/AndroidManifest.xml:18:5-19
+MERGED from [com.google.firebase:firebase-config:11.0.4] /Users/harshi/.android/build-cache/d5dadda2656e8f293875d64f2c498f46ff522679/output/AndroidManifest.xml:18:5-19
+MERGED from [com.google.android.gms:play-services-awareness:11.0.4] /Users/harshi/.android/build-cache/38391bd50ed57e5bd00b9293e46c2cb005674ba0/output/AndroidManifest.xml:18:5-19
+MERGED from [com.google.firebase:firebase-crash:11.0.4] /Users/harshi/.android/build-cache/771ad4f5c2f29649790acfa3e24522ccd92c1ac9/output/AndroidManifest.xml:22:5-23:19
+MERGED from [com.google.firebase:firebase-auth:11.0.4] /Users/harshi/.android/build-cache/af614edd7c5fa996174c5ddf69a692eac6b88a59/output/AndroidManifest.xml:19:5-20:19
+MERGED from [com.google.firebase:firebase-dynamic-links:11.0.4] /Users/harshi/.android/build-cache/f8e505c2ce623ef295002c318cd0952984ae2c3b/output/AndroidManifest.xml:5:3-17
+MERGED from [com.google.firebase:firebase-messaging:11.0.4] /Users/harshi/.android/build-cache/9f0827c8f6b23e3cf7d5c0c79bd6d76eaefbec96/output/AndroidManifest.xml:19:5-29:19
+MERGED from [com.google.android.gms:play-services-fitness:11.0.4] /Users/harshi/.android/build-cache/999b390b8d7b546f7048ed4fcfec553541c7c336/output/AndroidManifest.xml:18:5-19
+MERGED from [com.google.android.gms:play-services-games:11.0.4] /Users/harshi/.android/build-cache/c13e506cda15c8235def89f504ce37733da6d52a/output/AndroidManifest.xml:18:5-19
+MERGED from [com.google.android.gms:play-services-drive:11.0.4] /Users/harshi/.android/build-cache/15358690c771b940616057bba9741efc5db6cae0/output/AndroidManifest.xml:18:5-19
+MERGED from [com.google.android.gms:play-services-gass:11.0.4] /Users/harshi/.android/build-cache/ea354a3127a6b5e00755bdc422caad7e8319478f/output/AndroidManifest.xml:4:5-19
+MERGED from [com.google.android.gms:play-services-gcm:11.0.4] /Users/harshi/.android/build-cache/c38cc688dff38aaf03112d6f7cde9afda42bd909/output/AndroidManifest.xml:23:5-19
+MERGED from [com.google.firebase:firebase-appindexing:11.0.4] /Users/harshi/.android/build-cache/a8103fb4180ef81b105758ea4026e6a63e7461a2/output/AndroidManifest.xml:18:5-19
+MERGED from [com.google.android.gms:play-services-iid:11.0.4] /Users/harshi/.android/build-cache/622d462e775185fbdc272d8f68c222ed5770c78c/output/AndroidManifest.xml:23:5-19
+MERGED from [com.google.android.gms:play-services-nearby:11.0.4] /Users/harshi/.android/build-cache/ec4c664ed3440564130f078fc2af33e9c3138b2c/output/AndroidManifest.xml:5:5-19
+MERGED from [com.google.android.gms:play-services-panorama:11.0.4] /Users/harshi/.android/build-cache/ad2385e7ac5f879110fe4660d40cd0b0ee1596ff/output/AndroidManifest.xml:18:5-19
+MERGED from [com.google.android.gms:play-services-places:11.0.4] /Users/harshi/.android/build-cache/44435672ae26f36883ce9745581fb9ad10d9138c/output/AndroidManifest.xml:18:5-19
+MERGED from [com.google.android.gms:play-services-plus:11.0.4] /Users/harshi/.android/build-cache/f72416f2c93d35d5acba8763c0e551fdce4cd8ca/output/AndroidManifest.xml:18:5-19
+MERGED from [com.google.android.gms:play-services-safetynet:11.0.4] /Users/harshi/.android/build-cache/e4b129f7856ed49ea10d8ebd91423412dd00e539/output/AndroidManifest.xml:18:5-19
+MERGED from [com.google.android.gms:play-services-tagmanager-api:11.0.4] /Users/harshi/.android/build-cache/cb02e64f27f4eca91e1afcd951806cffcbd24695/output/AndroidManifest.xml:23:5-33:19
+MERGED from [com.google.firebase:firebase-analytics:11.0.4] /Users/harshi/.android/build-cache/05def36407498d6a2845f204dc433841a3aa564f/output/AndroidManifest.xml:24:5-34:19
+MERGED from [com.google.firebase:firebase-analytics-impl:11.0.4] /Users/harshi/.android/build-cache/d69607f3a2e909506425ec55410018d6e5af8473/output/AndroidManifest.xml:24:5-28:19
+MERGED from [com.google.firebase:firebase-iid:11.0.4] /Users/harshi/.android/build-cache/1c427f2518b86ff027a972dd2dc32cfc1798297a/output/AndroidManifest.xml:28:5-49:19
+MERGED from [com.google.firebase:firebase-common:11.0.4] /Users/harshi/.android/build-cache/d5b368aaedadf48999c8c4b7d133b983ac86a79a/output/AndroidManifest.xml:4:5-7:19
+MERGED from [com.google.android.gms:play-services-tagmanager-v4-impl:11.0.4] /Users/harshi/.android/build-cache/fa8193e46e32d694581028789a9967448a4fe006/output/AndroidManifest.xml:19:5-19
+MERGED from [com.google.android.gms:play-services-analytics-impl:11.0.4] /Users/harshi/.android/build-cache/f9252ad3e14d7e105b73fe8189f258f4c062d21e/output/AndroidManifest.xml:26:5-19
+MERGED from [com.google.android.gms:play-services-vision:11.0.4] /Users/harshi/.android/build-cache/15e23e8f159c1ab59c835575017ceedb0ded9101/output/AndroidManifest.xml:4:5-19
+MERGED from [com.google.android.gms:play-services-vision-common:11.0.4] /Users/harshi/.android/build-cache/a5b259af05af257374d7530dc4309fada5f3e36a/output/AndroidManifest.xml:4:5-19
+MERGED from [com.google.android.gms:play-services-identity:11.0.4] /Users/harshi/.android/build-cache/8a3990227f647964e65f5822eee72b0a0b723767/output/AndroidManifest.xml:18:5-19
+MERGED from [com.google.android.gms:play-services-maps:11.0.4] /Users/harshi/.android/build-cache/2edbb2868c64cd3b2f35be414db6949fa602c6b2/output/AndroidManifest.xml:24:5-19
+MERGED from [com.google.android.gms:play-services-wearable:11.0.4] /Users/harshi/.android/build-cache/f6137d9198c1b2a7e492e055e0218f774e24ac75/output/AndroidManifest.xml:18:5-19
+MERGED from [com.google.android.gms:play-services-location:11.0.4] /Users/harshi/.android/build-cache/6ec4c07234fb483d38973a76be51cc777f47464c/output/AndroidManifest.xml:4:5-19
+MERGED from [com.google.android.gms:play-services-base:11.0.4] /Users/harshi/.android/build-cache/51a6ae56396ec9231f0dad7988028915ad16c1c5/output/AndroidManifest.xml:18:5-20:19
+MERGED from [com.google.android.gms:play-services-tasks:11.0.4] /Users/harshi/.android/build-cache/117e4d921e6cb90f28673d404c39276c3beb5f94/output/AndroidManifest.xml:4:5-19
+MERGED from [com.google.android.gms:play-services-basement:11.0.4] /Users/harshi/.android/build-cache/7ba519ac6a851c4a04e951b7700dbaa8713579c6/output/AndroidManifest.xml:19:5-21:19
+MERGED from [com.android.support:support-v4:25.2.0] /Users/harshi/.android/build-cache/c43f6f4b835dbc06b91f4be38579ea7a3d275ee6/output/AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:support-fragment:25.2.0] /Users/harshi/.android/build-cache/9dad9a87f36ddee99da97fca98d69edfddc215e2/output/AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:support-media-compat:25.2.0] /Users/harshi/.android/build-cache/dab923f97acbcefd148a978fb063c1325bef5456/output/AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:support-core-ui:25.2.0] /Users/harshi/.android/build-cache/9d378981e27fdc9a230242e498a3940ae3a65b57/output/AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:support-core-utils:25.2.0] /Users/harshi/.android/build-cache/c61cd2ff173e8471255f5869f39d0309503d77e2/output/AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:support-compat:25.2.0] /Users/harshi/.android/build-cache/e0fe9f84f5d03071347e9e769bac2a35909968e4/output/AndroidManifest.xml:25:5-20
+MERGED from [com.android.support.constraint:constraint-layout:1.0.2] /Users/harshi/.android/build-cache/32a2251149c8bba3e3e4fe2643dc33483036fa01/output/AndroidManifest.xml:9:5-20
+MERGED from [com.android.volley:volley:1.0.0] /Users/harshi/.android/build-cache/d278be4933f8f658d678c6348a1711f911992e8f/output/AndroidManifest.xml:9:5-20
+	android:label
+		ADDED from /Users/harshi/AndroidStudioProjects/Gpscloudalert/app/src/main/AndroidManifest.xml:21:9-41
+	android:supportsRtl
+		ADDED from /Users/harshi/AndroidStudioProjects/Gpscloudalert/app/src/main/AndroidManifest.xml:23:9-35
+	android:roundIcon
+		ADDED from /Users/harshi/AndroidStudioProjects/Gpscloudalert/app/src/main/AndroidManifest.xml:22:9-54
+	android:allowBackup
+		ADDED from /Users/harshi/AndroidStudioProjects/Gpscloudalert/app/src/main/AndroidManifest.xml:19:9-35
+	android:icon
+		ADDED from /Users/harshi/AndroidStudioProjects/Gpscloudalert/app/src/main/AndroidManifest.xml:20:9-43
+	android:theme
+		ADDED from /Users/harshi/AndroidStudioProjects/Gpscloudalert/app/src/main/AndroidManifest.xml:24:9-40
+service#com.gpscloudalert.GeofenceTrasitionIntentService
+ADDED from /Users/harshi/AndroidStudioProjects/Gpscloudalert/app/src/main/AndroidManifest.xml:28:9-30:15
+	android:name
+		ADDED from /Users/harshi/AndroidStudioProjects/Gpscloudalert/app/src/main/AndroidManifest.xml:28:18-64
+meta-data#com.google.android.geo.API_KEY
+ADDED from /Users/harshi/AndroidStudioProjects/Gpscloudalert/app/src/main/AndroidManifest.xml:40:9-42:71
+	android:value
+		ADDED from /Users/harshi/AndroidStudioProjects/Gpscloudalert/app/src/main/AndroidManifest.xml:42:13-68
+	android:name
+		ADDED from /Users/harshi/AndroidStudioProjects/Gpscloudalert/app/src/main/AndroidManifest.xml:41:13-58
+meta-data#com.google.android.gms.version
+ADDED from /Users/harshi/AndroidStudioProjects/Gpscloudalert/app/src/main/AndroidManifest.xml:43:9-45:69
+MERGED from [com.google.android.gms:play-services-basement:11.0.4] /Users/harshi/.android/build-cache/7ba519ac6a851c4a04e951b7700dbaa8713579c6/output/AndroidManifest.xml:20:9-121
+	android:value
+		ADDED from /Users/harshi/AndroidStudioProjects/Gpscloudalert/app/src/main/AndroidManifest.xml:45:13-66
+	android:name
+		ADDED from /Users/harshi/AndroidStudioProjects/Gpscloudalert/app/src/main/AndroidManifest.xml:44:13-58
+activity#com.gpscloudalert.MapsActivity
+ADDED from /Users/harshi/AndroidStudioProjects/Gpscloudalert/app/src/main/AndroidManifest.xml:46:9-54:20
+	android:label
+		ADDED from /Users/harshi/AndroidStudioProjects/Gpscloudalert/app/src/main/AndroidManifest.xml:48:13-56
+	android:name
+		ADDED from /Users/harshi/AndroidStudioProjects/Gpscloudalert/app/src/main/AndroidManifest.xml:47:13-41
+intent-filter#android.intent.action.MAIN+android.intent.category.LAUNCHER
+ADDED from /Users/harshi/AndroidStudioProjects/Gpscloudalert/app/src/main/AndroidManifest.xml:49:13-53:29
+action#android.intent.action.MAIN
+ADDED from /Users/harshi/AndroidStudioProjects/Gpscloudalert/app/src/main/AndroidManifest.xml:50:17-69
+	android:name
+		ADDED from /Users/harshi/AndroidStudioProjects/Gpscloudalert/app/src/main/AndroidManifest.xml:50:25-66
+category#android.intent.category.LAUNCHER
+ADDED from /Users/harshi/AndroidStudioProjects/Gpscloudalert/app/src/main/AndroidManifest.xml:52:17-77
+	android:name
+		ADDED from /Users/harshi/AndroidStudioProjects/Gpscloudalert/app/src/main/AndroidManifest.xml:52:27-74
+uses-sdk
+INJECTED from /Users/harshi/AndroidStudioProjects/Gpscloudalert/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
+MERGED from [com.google.android.gms:play-services:11.0.4] /Users/harshi/.android/build-cache/01acc04813641c11fcc39c919713211ad239ef82/output/AndroidManifest.xml:4:5-43
+MERGED from [com.google.android.gms:play-services-ads:11.0.4] /Users/harshi/.android/build-cache/6bc34fd9ab3381987a90f32ba9d49ec94aa577dc/output/AndroidManifest.xml:17:5-43
+MERGED from [com.google.android.gms:play-services-ads-lite:11.0.4] /Users/harshi/.android/build-cache/e262320ba3c398cdfddd42efd01418b7feaeaaed/output/AndroidManifest.xml:22:5-43
+MERGED from [com.google.android.gms:play-services-analytics:11.0.4] /Users/harshi/.android/build-cache/ff4756d9ae17595f493abc14f53b2465301c0da9/output/AndroidManifest.xml:17:5-43
+MERGED from [com.google.android.gms:play-services-appinvite:11.0.4] /Users/harshi/.android/build-cache/f020c81ebc13fca7edb962205cc267786f86d146/output/AndroidManifest.xml:17:5-43
+MERGED from [com.google.android.gms:play-services-auth-api-phone:11.0.4] /Users/harshi/.android/build-cache/978b1f74ee7c463b40549e4e1fbbe4cb89de7a2e/output/AndroidManifest.xml:3:3-41
+MERGED from [com.google.android.gms:play-services-auth:11.0.4] /Users/harshi/.android/build-cache/1fdb70dca45d383efd9f09c9c699c062ededf799/output/AndroidManifest.xml:17:5-43
+MERGED from [com.google.android.gms:play-services-auth-base:11.0.4] /Users/harshi/.android/build-cache/b45595e64fb80ef47988c0b7fedba17d5e81fdf3/output/AndroidManifest.xml:4:5-43
+MERGED from [com.google.android.gms:play-services-cast-framework:11.0.4] /Users/harshi/.android/build-cache/557fd10f050c31d73006445f8a62781c3ba289bd/output/AndroidManifest.xml:3:5-43
+MERGED from [com.google.android.gms:play-services-cast:11.0.4] /Users/harshi/.android/build-cache/ad13ffdb40e50ba4482a9cf4d153b818e99cd73c/output/AndroidManifest.xml:17:5-43
+MERGED from [com.android.support:mediarouter-v7:25.2.0] /Users/harshi/.android/build-cache/51a0ed343fc1ca849d9fa9df70451745dfb09766/output/AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:appcompat-v7:25.2.0] /Users/harshi/.android/build-cache/5843078c7de83ac742d0c6fec6ad6915fcc93c32/output/AndroidManifest.xml:21:5-23:78
+MERGED from [com.android.support:animated-vector-drawable:25.2.0] /Users/harshi/.android/build-cache/c577885eefeaee95bb92de877740e13f59e35413/output/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-vector-drawable:25.2.0] /Users/harshi/.android/build-cache/3244c3d6858bcf78a7eab3bbf755b683c0c59b81/output/AndroidManifest.xml:21:5-43
+MERGED from [com.android.support:palette-v7:25.2.0] /Users/harshi/.android/build-cache/ef403557242945a4a15ff8d15cb32845d34e538d/output/AndroidManifest.xml:20:5-43
+MERGED from [com.google.android.gms:play-services-clearcut:11.0.4] /Users/harshi/.android/build-cache/53c08dc4b26f76cad0a1e3a6cd13b0e355da47bc/output/AndroidManifest.xml:17:5-43
+MERGED from [com.google.firebase:firebase-config:11.0.4] /Users/harshi/.android/build-cache/d5dadda2656e8f293875d64f2c498f46ff522679/output/AndroidManifest.xml:17:5-43
+MERGED from [com.google.android.gms:play-services-awareness:11.0.4] /Users/harshi/.android/build-cache/38391bd50ed57e5bd00b9293e46c2cb005674ba0/output/AndroidManifest.xml:17:5-43
+MERGED from [com.google.firebase:firebase-crash:11.0.4] /Users/harshi/.android/build-cache/771ad4f5c2f29649790acfa3e24522ccd92c1ac9/output/AndroidManifest.xml:20:5-43
+MERGED from [com.google.firebase:firebase-auth:11.0.4] /Users/harshi/.android/build-cache/af614edd7c5fa996174c5ddf69a692eac6b88a59/output/AndroidManifest.xml:17:5-43
+MERGED from [com.google.firebase:firebase-database:11.0.4] /Users/harshi/.android/build-cache/19a3a986e4fb64c2be37af04597dc1fa5d0f1119/output/AndroidManifest.xml:3:5-43
+MERGED from [com.google.firebase:firebase-database-connection:11.0.4] /Users/harshi/.android/build-cache/647ce1748db84882c73e3203eadac9955131f9de/output/AndroidManifest.xml:3:5-43
+MERGED from [com.google.firebase:firebase-dynamic-links:11.0.4] /Users/harshi/.android/build-cache/f8e505c2ce623ef295002c318cd0952984ae2c3b/output/AndroidManifest.xml:3:3-41
+MERGED from [com.google.firebase:firebase-messaging:11.0.4] /Users/harshi/.android/build-cache/9f0827c8f6b23e3cf7d5c0c79bd6d76eaefbec96/output/AndroidManifest.xml:17:5-43
+MERGED from [com.google.firebase:firebase-storage:11.0.4] /Users/harshi/.android/build-cache/3b156f5958dfa9e42a07f7f015f707bba43962c8/output/AndroidManifest.xml:3:5-43
+MERGED from [com.google.firebase:firebase-storage-common:11.0.4] /Users/harshi/.android/build-cache/e483c725677513417473da1f197ee76813742b5a/output/AndroidManifest.xml:3:5-43
+MERGED from [com.google.android.gms:play-services-fitness:11.0.4] /Users/harshi/.android/build-cache/999b390b8d7b546f7048ed4fcfec553541c7c336/output/AndroidManifest.xml:17:5-43
+MERGED from [com.google.android.gms:play-services-games:11.0.4] /Users/harshi/.android/build-cache/c13e506cda15c8235def89f504ce37733da6d52a/output/AndroidManifest.xml:17:5-43
+MERGED from [com.google.android.gms:play-services-drive:11.0.4] /Users/harshi/.android/build-cache/15358690c771b940616057bba9741efc5db6cae0/output/AndroidManifest.xml:17:5-43
+MERGED from [com.google.android.gms:play-services-gass:11.0.4] /Users/harshi/.android/build-cache/ea354a3127a6b5e00755bdc422caad7e8319478f/output/AndroidManifest.xml:3:5-43
+MERGED from [com.google.android.gms:play-services-gcm:11.0.4] /Users/harshi/.android/build-cache/c38cc688dff38aaf03112d6f7cde9afda42bd909/output/AndroidManifest.xml:17:5-43
+MERGED from [com.google.firebase:firebase-appindexing:11.0.4] /Users/harshi/.android/build-cache/a8103fb4180ef81b105758ea4026e6a63e7461a2/output/AndroidManifest.xml:17:5-43
+MERGED from [com.google.android.gms:play-services-iid:11.0.4] /Users/harshi/.android/build-cache/622d462e775185fbdc272d8f68c222ed5770c78c/output/AndroidManifest.xml:17:5-43
+MERGED from [com.google.android.gms:play-services-instantapps:11.0.4] /Users/harshi/.android/build-cache/b581cf25a1c6e25ce1d16a97bcd25d3dbb906db8/output/AndroidManifest.xml:3:5-43
+MERGED from [com.google.android.gms:play-services-nearby:11.0.4] /Users/harshi/.android/build-cache/ec4c664ed3440564130f078fc2af33e9c3138b2c/output/AndroidManifest.xml:3:5-43
+MERGED from [com.google.android.gms:play-services-panorama:11.0.4] /Users/harshi/.android/build-cache/ad2385e7ac5f879110fe4660d40cd0b0ee1596ff/output/AndroidManifest.xml:17:5-43
+MERGED from [com.google.android.gms:play-services-places:11.0.4] /Users/harshi/.android/build-cache/44435672ae26f36883ce9745581fb9ad10d9138c/output/AndroidManifest.xml:17:5-43
+MERGED from [com.google.android.gms:play-services-plus:11.0.4] /Users/harshi/.android/build-cache/f72416f2c93d35d5acba8763c0e551fdce4cd8ca/output/AndroidManifest.xml:17:5-43
+MERGED from [com.google.android.gms:play-services-safetynet:11.0.4] /Users/harshi/.android/build-cache/e4b129f7856ed49ea10d8ebd91423412dd00e539/output/AndroidManifest.xml:17:5-43
+MERGED from [com.google.android.gms:play-services-tagmanager:11.0.4] /Users/harshi/.android/build-cache/aa24c68fabf04aa1afd75588df95429e5cd95935/output/AndroidManifest.xml:17:5-43
+MERGED from [com.google.android.gms:play-services-tagmanager-api:11.0.4] /Users/harshi/.android/build-cache/cb02e64f27f4eca91e1afcd951806cffcbd24695/output/AndroidManifest.xml:17:5-43
+MERGED from [com.google.firebase:firebase-analytics:11.0.4] /Users/harshi/.android/build-cache/05def36407498d6a2845f204dc433841a3aa564f/output/AndroidManifest.xml:17:5-43
+MERGED from [com.google.firebase:firebase-analytics-impl:11.0.4] /Users/harshi/.android/build-cache/d69607f3a2e909506425ec55410018d6e5af8473/output/AndroidManifest.xml:17:5-43
+MERGED from [com.google.firebase:firebase-iid:11.0.4] /Users/harshi/.android/build-cache/1c427f2518b86ff027a972dd2dc32cfc1798297a/output/AndroidManifest.xml:17:5-43
+MERGED from [com.google.firebase:firebase-common:11.0.4] /Users/harshi/.android/build-cache/d5b368aaedadf48999c8c4b7d133b983ac86a79a/output/AndroidManifest.xml:3:5-43
+MERGED from [com.google.android.gms:play-services-tagmanager-v4-impl:11.0.4] /Users/harshi/.android/build-cache/fa8193e46e32d694581028789a9967448a4fe006/output/AndroidManifest.xml:17:5-43
+MERGED from [com.google.android.gms:play-services-analytics-impl:11.0.4] /Users/harshi/.android/build-cache/f9252ad3e14d7e105b73fe8189f258f4c062d21e/output/AndroidManifest.xml:17:5-43
+MERGED from [com.google.android.gms:play-services-vision:11.0.4] /Users/harshi/.android/build-cache/15e23e8f159c1ab59c835575017ceedb0ded9101/output/AndroidManifest.xml:3:5-43
+MERGED from [com.google.android.gms:play-services-vision-common:11.0.4] /Users/harshi/.android/build-cache/a5b259af05af257374d7530dc4309fada5f3e36a/output/AndroidManifest.xml:3:5-43
+MERGED from [com.google.android.gms:play-services-wallet:11.0.4] /Users/harshi/.android/build-cache/d39ca28ab2434f6483bd68cd32f9c6d5ab527ddd/output/AndroidManifest.xml:18:5-43
+MERGED from [com.google.android.gms:play-services-identity:11.0.4] /Users/harshi/.android/build-cache/8a3990227f647964e65f5822eee72b0a0b723767/output/AndroidManifest.xml:17:5-43
+MERGED from [com.google.android.gms:play-services-maps:11.0.4] /Users/harshi/.android/build-cache/2edbb2868c64cd3b2f35be414db6949fa602c6b2/output/AndroidManifest.xml:23:5-43
+MERGED from [com.google.android.gms:play-services-wearable:11.0.4] /Users/harshi/.android/build-cache/f6137d9198c1b2a7e492e055e0218f774e24ac75/output/AndroidManifest.xml:17:5-43
+MERGED from [com.google.android.gms:play-services-location:11.0.4] /Users/harshi/.android/build-cache/6ec4c07234fb483d38973a76be51cc777f47464c/output/AndroidManifest.xml:3:5-43
+MERGED from [com.google.android.gms:play-services-base:11.0.4] /Users/harshi/.android/build-cache/51a6ae56396ec9231f0dad7988028915ad16c1c5/output/AndroidManifest.xml:17:5-43
+MERGED from [com.google.android.gms:play-services-tasks:11.0.4] /Users/harshi/.android/build-cache/117e4d921e6cb90f28673d404c39276c3beb5f94/output/AndroidManifest.xml:3:5-43
+MERGED from [com.google.android.gms:play-services-basement:11.0.4] /Users/harshi/.android/build-cache/7ba519ac6a851c4a04e951b7700dbaa8713579c6/output/AndroidManifest.xml:17:5-43
+MERGED from [com.android.support:support-v4:25.2.0] /Users/harshi/.android/build-cache/c43f6f4b835dbc06b91f4be38579ea7a3d275ee6/output/AndroidManifest.xml:21:5-23:54
+MERGED from [com.android.support:support-fragment:25.2.0] /Users/harshi/.android/build-cache/9dad9a87f36ddee99da97fca98d69edfddc215e2/output/AndroidManifest.xml:21:5-23:60
+MERGED from [com.android.support:support-media-compat:25.2.0] /Users/harshi/.android/build-cache/dab923f97acbcefd148a978fb063c1325bef5456/output/AndroidManifest.xml:21:5-23:63
+MERGED from [com.android.support:support-core-ui:25.2.0] /Users/harshi/.android/build-cache/9d378981e27fdc9a230242e498a3940ae3a65b57/output/AndroidManifest.xml:21:5-23:58
+MERGED from [com.android.support:support-core-utils:25.2.0] /Users/harshi/.android/build-cache/c61cd2ff173e8471255f5869f39d0309503d77e2/output/AndroidManifest.xml:21:5-23:61
+MERGED from [com.android.support:support-compat:25.2.0] /Users/harshi/.android/build-cache/e0fe9f84f5d03071347e9e769bac2a35909968e4/output/AndroidManifest.xml:21:5-23:58
+MERGED from [com.android.support.constraint:constraint-layout:1.0.2] /Users/harshi/.android/build-cache/32a2251149c8bba3e3e4fe2643dc33483036fa01/output/AndroidManifest.xml:5:5-7:41
+MERGED from [com.android.volley:volley:1.0.0] /Users/harshi/.android/build-cache/d278be4933f8f658d678c6348a1711f911992e8f/output/AndroidManifest.xml:7:5-43
+	tools:overrideLibrary
+		ADDED from [com.android.support:appcompat-v7:25.2.0] /Users/harshi/.android/build-cache/5843078c7de83ac742d0c6fec6ad6915fcc93c32/output/AndroidManifest.xml:23:9-75
+	android:targetSdkVersion
+		INJECTED from /Users/harshi/AndroidStudioProjects/Gpscloudalert/app/src/main/AndroidManifest.xml
+		INJECTED from /Users/harshi/AndroidStudioProjects/Gpscloudalert/app/src/main/AndroidManifest.xml
+	android:minSdkVersion
+		INJECTED from /Users/harshi/AndroidStudioProjects/Gpscloudalert/app/src/main/AndroidManifest.xml
+		INJECTED from /Users/harshi/AndroidStudioProjects/Gpscloudalert/app/src/main/AndroidManifest.xml
+uses-permission#android.permission.ACCESS_NETWORK_STATE
+ADDED from [com.google.android.gms:play-services-ads-lite:11.0.4] /Users/harshi/.android/build-cache/e262320ba3c398cdfddd42efd01418b7feaeaaed/output/AndroidManifest.xml:20:5-78
+MERGED from [com.google.android.gms:play-services-analytics:11.0.4] /Users/harshi/.android/build-cache/ff4756d9ae17595f493abc14f53b2465301c0da9/output/AndroidManifest.xml:21:5-78
+MERGED from [com.google.android.gms:play-services-nearby:11.0.4] /Users/harshi/.android/build-cache/ec4c664ed3440564130f078fc2af33e9c3138b2c/output/AndroidManifest.xml:4:5-78
+MERGED from [com.google.android.gms:play-services-tagmanager-api:11.0.4] /Users/harshi/.android/build-cache/cb02e64f27f4eca91e1afcd951806cffcbd24695/output/AndroidManifest.xml:21:5-78
+MERGED from [com.google.firebase:firebase-analytics:11.0.4] /Users/harshi/.android/build-cache/05def36407498d6a2845f204dc433841a3aa564f/output/AndroidManifest.xml:21:5-78
+MERGED from [com.google.firebase:firebase-analytics-impl:11.0.4] /Users/harshi/.android/build-cache/d69607f3a2e909506425ec55410018d6e5af8473/output/AndroidManifest.xml:21:5-78
+MERGED from [com.google.firebase:firebase-iid:11.0.4] /Users/harshi/.android/build-cache/1c427f2518b86ff027a972dd2dc32cfc1798297a/output/AndroidManifest.xml:19:5-78
+MERGED from [com.google.android.gms:play-services-analytics-impl:11.0.4] /Users/harshi/.android/build-cache/f9252ad3e14d7e105b73fe8189f258f4c062d21e/output/AndroidManifest.xml:21:5-78
+MERGED from [com.google.android.gms:play-services-maps:11.0.4] /Users/harshi/.android/build-cache/2edbb2868c64cd3b2f35be414db6949fa602c6b2/output/AndroidManifest.xml:19:5-78
+	android:name
+		ADDED from [com.google.android.gms:play-services-ads-lite:11.0.4] /Users/harshi/.android/build-cache/e262320ba3c398cdfddd42efd01418b7feaeaaed/output/AndroidManifest.xml:20:22-76
+activity#com.google.android.gms.ads.AdActivity
+ADDED from [com.google.android.gms:play-services-ads-lite:11.0.4] /Users/harshi/.android/build-cache/e262320ba3c398cdfddd42efd01418b7feaeaaed/output/AndroidManifest.xml:25:9-232
+	android:configChanges
+		ADDED from [com.google.android.gms:play-services-ads-lite:11.0.4] /Users/harshi/.android/build-cache/e262320ba3c398cdfddd42efd01418b7feaeaaed/output/AndroidManifest.xml:25:72-181
+	android:theme
+		ADDED from [com.google.android.gms:play-services-ads-lite:11.0.4] /Users/harshi/.android/build-cache/e262320ba3c398cdfddd42efd01418b7feaeaaed/output/AndroidManifest.xml:25:182-230
+	android:name
+		ADDED from [com.google.android.gms:play-services-ads-lite:11.0.4] /Users/harshi/.android/build-cache/e262320ba3c398cdfddd42efd01418b7feaeaaed/output/AndroidManifest.xml:25:19-71
+uses-permission#android.permission.WAKE_LOCK
+ADDED from [com.google.android.gms:play-services-analytics:11.0.4] /Users/harshi/.android/build-cache/ff4756d9ae17595f493abc14f53b2465301c0da9/output/AndroidManifest.xml:24:5-67
+MERGED from [com.google.firebase:firebase-analytics:11.0.4] /Users/harshi/.android/build-cache/05def36407498d6a2845f204dc433841a3aa564f/output/AndroidManifest.xml:22:5-67
+MERGED from [com.google.firebase:firebase-analytics-impl:11.0.4] /Users/harshi/.android/build-cache/d69607f3a2e909506425ec55410018d6e5af8473/output/AndroidManifest.xml:22:5-67
+MERGED from [com.google.firebase:firebase-iid:11.0.4] /Users/harshi/.android/build-cache/1c427f2518b86ff027a972dd2dc32cfc1798297a/output/AndroidManifest.xml:21:5-67
+MERGED from [com.google.android.gms:play-services-analytics-impl:11.0.4] /Users/harshi/.android/build-cache/f9252ad3e14d7e105b73fe8189f258f4c062d21e/output/AndroidManifest.xml:24:5-67
+	android:name
+		ADDED from [com.google.android.gms:play-services-analytics:11.0.4] /Users/harshi/.android/build-cache/ff4756d9ae17595f493abc14f53b2465301c0da9/output/AndroidManifest.xml:24:22-65
+activity#com.google.android.gms.appinvite.PreviewActivity
+ADDED from [com.google.android.gms:play-services-appinvite:11.0.4] /Users/harshi/.android/build-cache/f020c81ebc13fca7edb962205cc267786f86d146/output/AndroidManifest.xml:20:9-25:20
+	android:exported
+		ADDED from [com.google.android.gms:play-services-appinvite:11.0.4] /Users/harshi/.android/build-cache/f020c81ebc13fca7edb962205cc267786f86d146/output/AndroidManifest.xml:20:51-74
+	android:theme
+		ADDED from [com.google.android.gms:play-services-appinvite:11.0.4] /Users/harshi/.android/build-cache/f020c81ebc13fca7edb962205cc267786f86d146/output/AndroidManifest.xml:20:75-121
+	android:name
+		ADDED from [com.google.android.gms:play-services-appinvite:11.0.4] /Users/harshi/.android/build-cache/f020c81ebc13fca7edb962205cc267786f86d146/output/AndroidManifest.xml:20:19-50
+intent-filter#android.intent.category.DEFAULT+com.google.android.gms.appinvite.ACTION_PREVIEW
+ADDED from [com.google.android.gms:play-services-appinvite:11.0.4] /Users/harshi/.android/build-cache/f020c81ebc13fca7edb962205cc267786f86d146/output/AndroidManifest.xml:21:13-24:29
+action#com.google.android.gms.appinvite.ACTION_PREVIEW
+ADDED from [com.google.android.gms:play-services-appinvite:11.0.4] /Users/harshi/.android/build-cache/f020c81ebc13fca7edb962205cc267786f86d146/output/AndroidManifest.xml:22:17-89
+	android:name
+		ADDED from [com.google.android.gms:play-services-appinvite:11.0.4] /Users/harshi/.android/build-cache/f020c81ebc13fca7edb962205cc267786f86d146/output/AndroidManifest.xml:22:25-87
+category#android.intent.category.DEFAULT
+ADDED from [com.google.android.gms:play-services-appinvite:11.0.4] /Users/harshi/.android/build-cache/f020c81ebc13fca7edb962205cc267786f86d146/output/AndroidManifest.xml:23:17-75
+	android:name
+		ADDED from [com.google.android.gms:play-services-appinvite:11.0.4] /Users/harshi/.android/build-cache/f020c81ebc13fca7edb962205cc267786f86d146/output/AndroidManifest.xml:23:27-73
+activity#com.google.android.gms.auth.api.signin.internal.SignInHubActivity
+ADDED from [com.google.android.gms:play-services-auth:11.0.4] /Users/harshi/.android/build-cache/1fdb70dca45d383efd9f09c9c699c062ededf799/output/AndroidManifest.xml:20:9-189
+	android:excludeFromRecents
+		ADDED from [com.google.android.gms:play-services-auth:11.0.4] /Users/harshi/.android/build-cache/1fdb70dca45d383efd9f09c9c699c062ededf799/output/AndroidManifest.xml:20:129-162
+	android:exported
+		ADDED from [com.google.android.gms:play-services-auth:11.0.4] /Users/harshi/.android/build-cache/1fdb70dca45d383efd9f09c9c699c062ededf799/output/AndroidManifest.xml:20:163-187
+	android:theme
+		ADDED from [com.google.android.gms:play-services-auth:11.0.4] /Users/harshi/.android/build-cache/1fdb70dca45d383efd9f09c9c699c062ededf799/output/AndroidManifest.xml:20:69-128
+	android:name
+		ADDED from [com.google.android.gms:play-services-auth:11.0.4] /Users/harshi/.android/build-cache/1fdb70dca45d383efd9f09c9c699c062ededf799/output/AndroidManifest.xml:20:19-68
+service#com.google.android.gms.auth.api.signin.RevocationBoundService
+ADDED from [com.google.android.gms:play-services-auth:11.0.4] /Users/harshi/.android/build-cache/1fdb70dca45d383efd9f09c9c699c062ededf799/output/AndroidManifest.xml:24:9-184
+	android:exported
+		ADDED from [com.google.android.gms:play-services-auth:11.0.4] /Users/harshi/.android/build-cache/1fdb70dca45d383efd9f09c9c699c062ededf799/output/AndroidManifest.xml:24:64-87
+	android:permission
+		ADDED from [com.google.android.gms:play-services-auth:11.0.4] /Users/harshi/.android/build-cache/1fdb70dca45d383efd9f09c9c699c062ededf799/output/AndroidManifest.xml:24:88-182
+	android:name
+		ADDED from [com.google.android.gms:play-services-auth:11.0.4] /Users/harshi/.android/build-cache/1fdb70dca45d383efd9f09c9c699c062ededf799/output/AndroidManifest.xml:24:18-63
+receiver#com.google.android.gms.cast.framework.media.MediaIntentReceiver
+ADDED from [com.google.android.gms:play-services-cast-framework:11.0.4] /Users/harshi/.android/build-cache/557fd10f050c31d73006445f8a62781c3ba289bd/output/AndroidManifest.xml:5:9-99
+	android:name
+		ADDED from [com.google.android.gms:play-services-cast-framework:11.0.4] /Users/harshi/.android/build-cache/557fd10f050c31d73006445f8a62781c3ba289bd/output/AndroidManifest.xml:5:19-97
+service#com.google.android.gms.cast.framework.media.MediaNotificationService
+ADDED from [com.google.android.gms:play-services-cast-framework:11.0.4] /Users/harshi/.android/build-cache/557fd10f050c31d73006445f8a62781c3ba289bd/output/AndroidManifest.xml:6:9-103
+	android:name
+		ADDED from [com.google.android.gms:play-services-cast-framework:11.0.4] /Users/harshi/.android/build-cache/557fd10f050c31d73006445f8a62781c3ba289bd/output/AndroidManifest.xml:6:18-101
+service#com.google.android.gms.cast.framework.ReconnectionService
+ADDED from [com.google.android.gms:play-services-cast-framework:11.0.4] /Users/harshi/.android/build-cache/557fd10f050c31d73006445f8a62781c3ba289bd/output/AndroidManifest.xml:7:9-92
+	android:name
+		ADDED from [com.google.android.gms:play-services-cast-framework:11.0.4] /Users/harshi/.android/build-cache/557fd10f050c31d73006445f8a62781c3ba289bd/output/AndroidManifest.xml:7:18-90
+service#com.google.firebase.messaging.FirebaseMessagingService
+ADDED from [com.google.firebase:firebase-messaging:11.0.4] /Users/harshi/.android/build-cache/9f0827c8f6b23e3cf7d5c0c79bd6d76eaefbec96/output/AndroidManifest.xml:23:9-27:19
+	android:exported
+		ADDED from [com.google.firebase:firebase-messaging:11.0.4] /Users/harshi/.android/build-cache/9f0827c8f6b23e3cf7d5c0c79bd6d76eaefbec96/output/AndroidManifest.xml:23:88-111
+	android:name
+		ADDED from [com.google.firebase:firebase-messaging:11.0.4] /Users/harshi/.android/build-cache/9f0827c8f6b23e3cf7d5c0c79bd6d76eaefbec96/output/AndroidManifest.xml:23:18-87
+intent-filter#com.google.firebase.MESSAGING_EVENT
+ADDED from [com.google.firebase:firebase-messaging:11.0.4] /Users/harshi/.android/build-cache/9f0827c8f6b23e3cf7d5c0c79bd6d76eaefbec96/output/AndroidManifest.xml:24:13-26:29
+	android:priority
+		ADDED from [com.google.firebase:firebase-messaging:11.0.4] /Users/harshi/.android/build-cache/9f0827c8f6b23e3cf7d5c0c79bd6d76eaefbec96/output/AndroidManifest.xml:24:28-51
+action#com.google.firebase.MESSAGING_EVENT
+ADDED from [com.google.firebase:firebase-messaging:11.0.4] /Users/harshi/.android/build-cache/9f0827c8f6b23e3cf7d5c0c79bd6d76eaefbec96/output/AndroidManifest.xml:25:17-77
+	android:name
+		ADDED from [com.google.firebase:firebase-messaging:11.0.4] /Users/harshi/.android/build-cache/9f0827c8f6b23e3cf7d5c0c79bd6d76eaefbec96/output/AndroidManifest.xml:25:25-75
+uses-permission#com.google.android.c2dm.permission.RECEIVE
+ADDED from [com.google.android.gms:play-services-gcm:11.0.4] /Users/harshi/.android/build-cache/c38cc688dff38aaf03112d6f7cde9afda42bd909/output/AndroidManifest.xml:20:5-81
+MERGED from [com.google.android.gms:play-services-iid:11.0.4] /Users/harshi/.android/build-cache/622d462e775185fbdc272d8f68c222ed5770c78c/output/AndroidManifest.xml:20:5-81
+MERGED from [com.google.firebase:firebase-iid:11.0.4] /Users/harshi/.android/build-cache/1c427f2518b86ff027a972dd2dc32cfc1798297a/output/AndroidManifest.xml:22:5-81
+	android:name
+		ADDED from [com.google.android.gms:play-services-gcm:11.0.4] /Users/harshi/.android/build-cache/c38cc688dff38aaf03112d6f7cde9afda42bd909/output/AndroidManifest.xml:20:22-79
+service#com.google.android.gms.tagmanager.TagManagerService
+ADDED from [com.google.android.gms:play-services-tagmanager-api:11.0.4] /Users/harshi/.android/build-cache/cb02e64f27f4eca91e1afcd951806cffcbd24695/output/AndroidManifest.xml:24:9-134
+	android:enabled
+		ADDED from [com.google.android.gms:play-services-tagmanager-api:11.0.4] /Users/harshi/.android/build-cache/cb02e64f27f4eca91e1afcd951806cffcbd24695/output/AndroidManifest.xml:24:110-132
+	android:exported
+		ADDED from [com.google.android.gms:play-services-tagmanager-api:11.0.4] /Users/harshi/.android/build-cache/cb02e64f27f4eca91e1afcd951806cffcbd24695/output/AndroidManifest.xml:24:85-109
+	android:name
+		ADDED from [com.google.android.gms:play-services-tagmanager-api:11.0.4] /Users/harshi/.android/build-cache/cb02e64f27f4eca91e1afcd951806cffcbd24695/output/AndroidManifest.xml:24:18-84
+activity#com.google.android.gms.tagmanager.TagManagerPreviewActivity
+ADDED from [com.google.android.gms:play-services-tagmanager-api:11.0.4] /Users/harshi/.android/build-cache/cb02e64f27f4eca91e1afcd951806cffcbd24695/output/AndroidManifest.xml:25:9-32:20
+	android:exported
+		ADDED from [com.google.android.gms:play-services-tagmanager-api:11.0.4] /Users/harshi/.android/build-cache/cb02e64f27f4eca91e1afcd951806cffcbd24695/output/AndroidManifest.xml:25:94-117
+	android:noHistory
+		ADDED from [com.google.android.gms:play-services-tagmanager-api:11.0.4] /Users/harshi/.android/build-cache/cb02e64f27f4eca91e1afcd951806cffcbd24695/output/AndroidManifest.xml:25:118-142
+	android:name
+		ADDED from [com.google.android.gms:play-services-tagmanager-api:11.0.4] /Users/harshi/.android/build-cache/cb02e64f27f4eca91e1afcd951806cffcbd24695/output/AndroidManifest.xml:25:19-93
+intent-filter#android.intent.action.VIEW+android.intent.category.BROWSABLE+android.intent.category.DEFAULT
+ADDED from [com.google.android.gms:play-services-tagmanager-api:11.0.4] /Users/harshi/.android/build-cache/cb02e64f27f4eca91e1afcd951806cffcbd24695/output/AndroidManifest.xml:26:13-31:29
+data
+ADDED from [com.google.android.gms:play-services-tagmanager-api:11.0.4] /Users/harshi/.android/build-cache/cb02e64f27f4eca91e1afcd951806cffcbd24695/output/AndroidManifest.xml:27:17-71
+	android:scheme
+		ADDED from [com.google.android.gms:play-services-tagmanager-api:11.0.4] /Users/harshi/.android/build-cache/cb02e64f27f4eca91e1afcd951806cffcbd24695/output/AndroidManifest.xml:27:23-69
+action#android.intent.action.VIEW
+ADDED from [com.google.android.gms:play-services-tagmanager-api:11.0.4] /Users/harshi/.android/build-cache/cb02e64f27f4eca91e1afcd951806cffcbd24695/output/AndroidManifest.xml:28:17-68
+	android:name
+		ADDED from [com.google.android.gms:play-services-tagmanager-api:11.0.4] /Users/harshi/.android/build-cache/cb02e64f27f4eca91e1afcd951806cffcbd24695/output/AndroidManifest.xml:28:25-66
+category#android.intent.category.BROWSABLE
+ADDED from [com.google.android.gms:play-services-tagmanager-api:11.0.4] /Users/harshi/.android/build-cache/cb02e64f27f4eca91e1afcd951806cffcbd24695/output/AndroidManifest.xml:30:17-77
+	android:name
+		ADDED from [com.google.android.gms:play-services-tagmanager-api:11.0.4] /Users/harshi/.android/build-cache/cb02e64f27f4eca91e1afcd951806cffcbd24695/output/AndroidManifest.xml:30:27-75
+receiver#com.google.android.gms.measurement.AppMeasurementReceiver
+ADDED from [com.google.firebase:firebase-analytics:11.0.4] /Users/harshi/.android/build-cache/05def36407498d6a2845f204dc433841a3aa564f/output/AndroidManifest.xml:25:7-26:18
+MERGED from [com.google.firebase:firebase-analytics-impl:11.0.4] /Users/harshi/.android/build-cache/d69607f3a2e909506425ec55410018d6e5af8473/output/AndroidManifest.xml:25:7-26:18
+	android:enabled
+		ADDED from [com.google.firebase:firebase-analytics:11.0.4] /Users/harshi/.android/build-cache/05def36407498d6a2845f204dc433841a3aa564f/output/AndroidManifest.xml:25:90-112
+	android:exported
+		ADDED from [com.google.firebase:firebase-analytics:11.0.4] /Users/harshi/.android/build-cache/05def36407498d6a2845f204dc433841a3aa564f/output/AndroidManifest.xml:25:113-137
+	android:name
+		ADDED from [com.google.firebase:firebase-analytics:11.0.4] /Users/harshi/.android/build-cache/05def36407498d6a2845f204dc433841a3aa564f/output/AndroidManifest.xml:25:17-89
+receiver#com.google.android.gms.measurement.AppMeasurementInstallReferrerReceiver
+ADDED from [com.google.firebase:firebase-analytics:11.0.4] /Users/harshi/.android/build-cache/05def36407498d6a2845f204dc433841a3aa564f/output/AndroidManifest.xml:27:7-31:18
+	android:enabled
+		ADDED from [com.google.firebase:firebase-analytics:11.0.4] /Users/harshi/.android/build-cache/05def36407498d6a2845f204dc433841a3aa564f/output/AndroidManifest.xml:27:162-184
+	android:exported
+		ADDED from [com.google.firebase:firebase-analytics:11.0.4] /Users/harshi/.android/build-cache/05def36407498d6a2845f204dc433841a3aa564f/output/AndroidManifest.xml:27:185-208
+	android:permission
+		ADDED from [com.google.firebase:firebase-analytics:11.0.4] /Users/harshi/.android/build-cache/05def36407498d6a2845f204dc433841a3aa564f/output/AndroidManifest.xml:27:105-161
+	android:name
+		ADDED from [com.google.firebase:firebase-analytics:11.0.4] /Users/harshi/.android/build-cache/05def36407498d6a2845f204dc433841a3aa564f/output/AndroidManifest.xml:27:17-104
+intent-filter#com.android.vending.INSTALL_REFERRER
+ADDED from [com.google.firebase:firebase-analytics:11.0.4] /Users/harshi/.android/build-cache/05def36407498d6a2845f204dc433841a3aa564f/output/AndroidManifest.xml:28:11-30:27
+action#com.android.vending.INSTALL_REFERRER
+ADDED from [com.google.firebase:firebase-analytics:11.0.4] /Users/harshi/.android/build-cache/05def36407498d6a2845f204dc433841a3aa564f/output/AndroidManifest.xml:29:15-76
+	android:name
+		ADDED from [com.google.firebase:firebase-analytics:11.0.4] /Users/harshi/.android/build-cache/05def36407498d6a2845f204dc433841a3aa564f/output/AndroidManifest.xml:29:23-74
+service#com.google.android.gms.measurement.AppMeasurementService
+ADDED from [com.google.firebase:firebase-analytics:11.0.4] /Users/harshi/.android/build-cache/05def36407498d6a2845f204dc433841a3aa564f/output/AndroidManifest.xml:32:7-137
+MERGED from [com.google.firebase:firebase-analytics-impl:11.0.4] /Users/harshi/.android/build-cache/d69607f3a2e909506425ec55410018d6e5af8473/output/AndroidManifest.xml:27:7-137
+	android:enabled
+		ADDED from [com.google.firebase:firebase-analytics:11.0.4] /Users/harshi/.android/build-cache/05def36407498d6a2845f204dc433841a3aa564f/output/AndroidManifest.xml:32:88-110
+	android:exported
+		ADDED from [com.google.firebase:firebase-analytics:11.0.4] /Users/harshi/.android/build-cache/05def36407498d6a2845f204dc433841a3aa564f/output/AndroidManifest.xml:32:111-135
+	android:name
+		ADDED from [com.google.firebase:firebase-analytics:11.0.4] /Users/harshi/.android/build-cache/05def36407498d6a2845f204dc433841a3aa564f/output/AndroidManifest.xml:32:16-87
+service#com.google.android.gms.measurement.AppMeasurementJobService
+ADDED from [com.google.firebase:firebase-analytics:11.0.4] /Users/harshi/.android/build-cache/05def36407498d6a2845f204dc433841a3aa564f/output/AndroidManifest.xml:33:7-197
+	android:enabled
+		ADDED from [com.google.firebase:firebase-analytics:11.0.4] /Users/harshi/.android/build-cache/05def36407498d6a2845f204dc433841a3aa564f/output/AndroidManifest.xml:33:148-170
+	android:exported
+		ADDED from [com.google.firebase:firebase-analytics:11.0.4] /Users/harshi/.android/build-cache/05def36407498d6a2845f204dc433841a3aa564f/output/AndroidManifest.xml:33:171-195
+	android:permission
+		ADDED from [com.google.firebase:firebase-analytics:11.0.4] /Users/harshi/.android/build-cache/05def36407498d6a2845f204dc433841a3aa564f/output/AndroidManifest.xml:33:91-147
+	android:name
+		ADDED from [com.google.firebase:firebase-analytics:11.0.4] /Users/harshi/.android/build-cache/05def36407498d6a2845f204dc433841a3aa564f/output/AndroidManifest.xml:33:16-90
+permission#${applicationId}.permission.C2D_MESSAGE
+ADDED from [com.google.firebase:firebase-iid:11.0.4] /Users/harshi/.android/build-cache/1c427f2518b86ff027a972dd2dc32cfc1798297a/output/AndroidManifest.xml:24:5-109
+	android:protectionLevel
+		ADDED from [com.google.firebase:firebase-iid:11.0.4] /Users/harshi/.android/build-cache/1c427f2518b86ff027a972dd2dc32cfc1798297a/output/AndroidManifest.xml:24:72-107
+	android:name
+		ADDED from [com.google.firebase:firebase-iid:11.0.4] /Users/harshi/.android/build-cache/1c427f2518b86ff027a972dd2dc32cfc1798297a/output/AndroidManifest.xml:24:17-71
+uses-permission#${applicationId}.permission.C2D_MESSAGE
+ADDED from [com.google.firebase:firebase-iid:11.0.4] /Users/harshi/.android/build-cache/1c427f2518b86ff027a972dd2dc32cfc1798297a/output/AndroidManifest.xml:26:5-78
+	android:name
+		ADDED from [com.google.firebase:firebase-iid:11.0.4] /Users/harshi/.android/build-cache/1c427f2518b86ff027a972dd2dc32cfc1798297a/output/AndroidManifest.xml:26:22-76
+receiver#com.google.firebase.iid.FirebaseInstanceIdReceiver
+ADDED from [com.google.firebase:firebase-iid:11.0.4] /Users/harshi/.android/build-cache/1c427f2518b86ff027a972dd2dc32cfc1798297a/output/AndroidManifest.xml:30:9-35:20
+	android:exported
+		ADDED from [com.google.firebase:firebase-iid:11.0.4] /Users/harshi/.android/build-cache/1c427f2518b86ff027a972dd2dc32cfc1798297a/output/AndroidManifest.xml:30:85-108
+	android:permission
+		ADDED from [com.google.firebase:firebase-iid:11.0.4] /Users/harshi/.android/build-cache/1c427f2518b86ff027a972dd2dc32cfc1798297a/output/AndroidManifest.xml:30:109-169
+	android:name
+		ADDED from [com.google.firebase:firebase-iid:11.0.4] /Users/harshi/.android/build-cache/1c427f2518b86ff027a972dd2dc32cfc1798297a/output/AndroidManifest.xml:30:19-84
+intent-filter#${applicationId}+com.google.android.c2dm.intent.RECEIVE
+ADDED from [com.google.firebase:firebase-iid:11.0.4] /Users/harshi/.android/build-cache/1c427f2518b86ff027a972dd2dc32cfc1798297a/output/AndroidManifest.xml:31:13-34:29
+action#com.google.android.c2dm.intent.RECEIVE
+ADDED from [com.google.firebase:firebase-iid:11.0.4] /Users/harshi/.android/build-cache/1c427f2518b86ff027a972dd2dc32cfc1798297a/output/AndroidManifest.xml:32:17-80
+	android:name
+		ADDED from [com.google.firebase:firebase-iid:11.0.4] /Users/harshi/.android/build-cache/1c427f2518b86ff027a972dd2dc32cfc1798297a/output/AndroidManifest.xml:32:25-78
+category#${applicationId}
+ADDED from [com.google.firebase:firebase-iid:11.0.4] /Users/harshi/.android/build-cache/1c427f2518b86ff027a972dd2dc32cfc1798297a/output/AndroidManifest.xml:33:17-60
+	android:name
+		ADDED from [com.google.firebase:firebase-iid:11.0.4] /Users/harshi/.android/build-cache/1c427f2518b86ff027a972dd2dc32cfc1798297a/output/AndroidManifest.xml:33:27-58
+receiver#com.google.firebase.iid.FirebaseInstanceIdInternalReceiver
+ADDED from [com.google.firebase:firebase-iid:11.0.4] /Users/harshi/.android/build-cache/1c427f2518b86ff027a972dd2dc32cfc1798297a/output/AndroidManifest.xml:39:9-119
+	android:exported
+		ADDED from [com.google.firebase:firebase-iid:11.0.4] /Users/harshi/.android/build-cache/1c427f2518b86ff027a972dd2dc32cfc1798297a/output/AndroidManifest.xml:39:93-117
+	android:name
+		ADDED from [com.google.firebase:firebase-iid:11.0.4] /Users/harshi/.android/build-cache/1c427f2518b86ff027a972dd2dc32cfc1798297a/output/AndroidManifest.xml:39:19-92
+service#com.google.firebase.iid.FirebaseInstanceIdService
+ADDED from [com.google.firebase:firebase-iid:11.0.4] /Users/harshi/.android/build-cache/1c427f2518b86ff027a972dd2dc32cfc1798297a/output/AndroidManifest.xml:43:9-47:19
+	android:exported
+		ADDED from [com.google.firebase:firebase-iid:11.0.4] /Users/harshi/.android/build-cache/1c427f2518b86ff027a972dd2dc32cfc1798297a/output/AndroidManifest.xml:43:83-106
+	android:name
+		ADDED from [com.google.firebase:firebase-iid:11.0.4] /Users/harshi/.android/build-cache/1c427f2518b86ff027a972dd2dc32cfc1798297a/output/AndroidManifest.xml:43:18-82
+intent-filter#com.google.firebase.INSTANCE_ID_EVENT
+ADDED from [com.google.firebase:firebase-iid:11.0.4] /Users/harshi/.android/build-cache/1c427f2518b86ff027a972dd2dc32cfc1798297a/output/AndroidManifest.xml:44:13-46:29
+	android:priority
+		ADDED from [com.google.firebase:firebase-iid:11.0.4] /Users/harshi/.android/build-cache/1c427f2518b86ff027a972dd2dc32cfc1798297a/output/AndroidManifest.xml:44:28-51
+action#com.google.firebase.INSTANCE_ID_EVENT
+ADDED from [com.google.firebase:firebase-iid:11.0.4] /Users/harshi/.android/build-cache/1c427f2518b86ff027a972dd2dc32cfc1798297a/output/AndroidManifest.xml:45:17-79
+	android:name
+		ADDED from [com.google.firebase:firebase-iid:11.0.4] /Users/harshi/.android/build-cache/1c427f2518b86ff027a972dd2dc32cfc1798297a/output/AndroidManifest.xml:45:25-77
+provider#com.google.firebase.provider.FirebaseInitProvider
+ADDED from [com.google.firebase:firebase-common:11.0.4] /Users/harshi/.android/build-cache/d5b368aaedadf48999c8c4b7d133b983ac86a79a/output/AndroidManifest.xml:6:9-194
+	android:authorities
+		ADDED from [com.google.firebase:firebase-common:11.0.4] /Users/harshi/.android/build-cache/d5b368aaedadf48999c8c4b7d133b983ac86a79a/output/AndroidManifest.xml:6:19-78
+	android:exported
+		ADDED from [com.google.firebase:firebase-common:11.0.4] /Users/harshi/.android/build-cache/d5b368aaedadf48999c8c4b7d133b983ac86a79a/output/AndroidManifest.xml:6:144-168
+	android:initOrder
+		ADDED from [com.google.firebase:firebase-common:11.0.4] /Users/harshi/.android/build-cache/d5b368aaedadf48999c8c4b7d133b983ac86a79a/output/AndroidManifest.xml:6:169-192
+	android:name
+		ADDED from [com.google.firebase:firebase-common:11.0.4] /Users/harshi/.android/build-cache/d5b368aaedadf48999c8c4b7d133b983ac86a79a/output/AndroidManifest.xml:6:79-143
+uses-feature#0x00020000
+ADDED from [com.google.android.gms:play-services-maps:11.0.4] /Users/harshi/.android/build-cache/2edbb2868c64cd3b2f35be414db6949fa602c6b2/output/AndroidManifest.xml:21:5-77
+	android:glEsVersion
+		ADDED from [com.google.android.gms:play-services-maps:11.0.4] /Users/harshi/.android/build-cache/2edbb2868c64cd3b2f35be414db6949fa602c6b2/output/AndroidManifest.xml:21:19-51
+	android:required
+		ADDED from [com.google.android.gms:play-services-maps:11.0.4] /Users/harshi/.android/build-cache/2edbb2868c64cd3b2f35be414db6949fa602c6b2/output/AndroidManifest.xml:21:52-75
+activity#com.google.android.gms.common.api.GoogleApiActivity
+ADDED from [com.google.android.gms:play-services-base:11.0.4] /Users/harshi/.android/build-cache/51a6ae56396ec9231f0dad7988028915ad16c1c5/output/AndroidManifest.xml:19:9-172
+	android:exported
+		ADDED from [com.google.android.gms:play-services-base:11.0.4] /Users/harshi/.android/build-cache/51a6ae56396ec9231f0dad7988028915ad16c1c5/output/AndroidManifest.xml:19:146-170
+	android:theme
+		ADDED from [com.google.android.gms:play-services-base:11.0.4] /Users/harshi/.android/build-cache/51a6ae56396ec9231f0dad7988028915ad16c1c5/output/AndroidManifest.xml:19:86-145
+	android:name
+		ADDED from [com.google.android.gms:play-services-base:11.0.4] /Users/harshi/.android/build-cache/51a6ae56396ec9231f0dad7988028915ad16c1c5/output/AndroidManifest.xml:19:19-85

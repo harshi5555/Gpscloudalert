@@ -1,0 +1,10 @@
+[
+    {
+        "merged": "/Users/harshi/AndroidStudioProjects/Gpscloudalert/app/build/intermediates/res/merged/debug/interpolator/mr_fast_out_slow_in.xml",
+        "source": "/Users/harshi/.android/build-cache/51a0ed343fc1ca849d9fa9df70451745dfb09766/output/res/interpolator/mr_fast_out_slow_in.xml"
+    },
+    {
+        "merged": "/Users/harshi/AndroidStudioProjects/Gpscloudalert/app/build/intermediates/res/merged/debug/interpolator/mr_linear_out_slow_in.xml",
+        "source": "/Users/harshi/.android/build-cache/51a0ed343fc1ca849d9fa9df70451745dfb09766/output/res/interpolator/mr_linear_out_slow_in.xml"
+    }
+]
