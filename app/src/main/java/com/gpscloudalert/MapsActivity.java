@@ -46,9 +46,6 @@ import com.google.android.gms.maps.model.CircleOptions;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.Marker;
 import com.google.android.gms.maps.model.MarkerOptions;
-
-
-
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
@@ -73,7 +70,7 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
     private static final long GEO_DURATION = 60 * 60 * 1000;
     private static final String GEOFENCE_REQ_ID = "My Geofence";
     private static final float GEOFENCE_RADIUS = 100.0f; // in meters
-    private static final int REQ_PERMISSION = 1;
+    private static final int REQ_PERMISSION = 999;
     private static final String NOTIFICATION_MSG = "NOTIFICATION MSG";
     private final int UPDATE_INTERVAL = 3 * 60 * 1000;// 3 minutes
     private final int FASTEST_INTERVAL = 30 * 1000;// 30 secs
@@ -101,7 +98,8 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
     private double distan;
     private  String address;
     private Location geoLocation;
-
+    private TextView warningStreet;
+    private ArrayList<LatLng> latLngArrayList;
 
 
 
@@ -111,21 +109,13 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_maps);
         // Obtain the SupportMapFragment and get notified when the map is ready to be used.
-        SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager()
-                .findFragmentById(map);
+        SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager().findFragmentById(map);
         mapFragment.getMapAsync(this);
-
-
-
 
         initialized();
         createGoogleApi();
-       // populateGeofenceList();
-
-
-
-
     }
+
     // Create a Intent send by the notification
     public static Intent createNotificationIntent(Context context, String msg) {
         Intent intent = new Intent(context, MapsActivity.class);
@@ -157,25 +147,21 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
 
     @Override
     public void onMapReady(GoogleMap googleMap) {
+
         mMap = googleMap;
         mMap = googleMap;
         mMap.setOnMapClickListener(this);
         mMap.setOnMarkerClickListener(this);
         mMap.setMyLocationEnabled(true);
-        LatLng stockholm =new LatLng(latL,lon);
-        address = getAddress(this,latL,lon);
-        //add marker and the address to the location
-        mMap.addMarker(new MarkerOptions().position(stockholm).title(address));
-        mMap.moveCamera(CameraUpdateFactory.newLatLng(stockholm));
-        startGeofence();
 
-
-          // Register the listener with the Location Manager to receive location updates
+     // Register the listener with the Location Manager to receive location updates
         if (ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION)
                 != PackageManager.PERMISSION_GRANTED && ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
 
             return;
         }
+
+
 
     }
 
@@ -226,10 +212,9 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
         //mMap.addMarker(new MarkerOptions().position(new LatLng(latL,lon)).title("Marker "));
         writeActualLocation(location);
 
-        // startGeofence();
 
 
-    }
+     }
 
     private void getLastKnownLocation() {
         Log.d(TAG, "getLastKnownLocation()");
@@ -342,15 +327,11 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
         drawGeofence();
         startGeofence();
         countDistance(lastLocation,geoLocation);
-
+        popup();
 
 
 
     }
-
-
-
-
 
 
     // Create a Location Marker
@@ -392,13 +373,11 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
                 .title(address);
         if (mMap != null) {
             // Remove last geoFenceMarker
-            if (geoFenceMarker != null)
+            if(geoFenceMarker != null)
                 geoFenceMarker.remove();
 
             geoFenceMarker = mMap.addMarker(markerOptions);
         }
-
-
 
     }
     //Method to calculate the distance in between the two geo locations
@@ -416,6 +395,7 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
        //distance = lastLocation.distanceTo(geoLocation);
 
     }
+
     private Geofence createGeofence(LatLng latLng, float radius) {
         Log.d(TAG, "createGeofence");
         List geofenceList = new ArrayList();
@@ -502,23 +482,6 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
         }
     }
 
-
-   /* public void populateGeofenceList() {
-        for (Map.Entry<String, LatLng> entry : Constants.LANDMARKS.entrySet()) {
-            mGeofenceList.add(new Geofence.Builder()
-                    .setRequestId(entry.getKey())
-                    .setCircularRegion(
-                            entry.getValue().latitude,
-                            entry.getValue().longitude,
-                            Constants.GEOFENCE_RADIUS_IN_METERS
-                    )
-                    .setExpirationDuration(Constants.GEOFENCE_EXPIRATION_IN_MILLISECONDS)
-                    .setTransitionTypes(Geofence.GEOFENCE_TRANSITION_ENTER |
-                            Geofence.GEOFENCE_TRANSITION_EXIT)
-                    .build());
-        }
-
-    }*/
     public String getAddress(Context ctx,double latL, double lon){
         String fullAdd =null;
         Geocoder geocoder = new Geocoder(ctx, Locale.getDefault());
@@ -538,7 +501,18 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
         return fullAdd;
     }
 
+    public void popup(){
+        PopupWarning popupWarning= new PopupWarning();
+        popupWarning.show(getSupportFragmentManager(),"popup warning");
 
+        Bundle args = new Bundle();
+        args.putString("key",address);
+
+        popupWarning.setArguments(args);
+
+
+
+    }
 
 }
 
