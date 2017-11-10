@@ -9,14 +9,8 @@ import android.graphics.Color;
 import android.location.Geocoder;
 import android.location.Location;
 
-import com.android.volley.RequestQueue;
-import com.android.volley.Response;
-import com.android.volley.toolbox.JsonObjectRequest;
-import com.android.volley.toolbox.Volley;
 import com.google.android.gms.common.api.ResultCallback;
 import com.google.android.gms.common.api.Status;
-import com.google.android.gms.identity.intents.Address;
-import com.google.android.gms.location.FusedLocationProviderApi;
 import com.google.android.gms.location.Geofence;
 import com.google.android.gms.location.GeofencingRequest;
 import com.google.android.gms.location.LocationListener;
@@ -26,8 +20,13 @@ import android.support.annotation.Nullable;
 import android.support.v4.app.ActivityCompat;
 import android.os.Bundle;
 import android.support.v4.content.ContextCompat;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.google.android.gms.common.ConnectionResult;
@@ -46,11 +45,11 @@ import com.google.android.gms.maps.model.CircleOptions;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.Marker;
 import com.google.android.gms.maps.model.MarkerOptions;
+
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Locale;
-import java.util.Map;
 
 
 import static com.gpscloudalert.R.id.map;
@@ -63,50 +62,77 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
         GoogleApiClient.OnConnectionFailedListener,
         LocationListener, GoogleMap.OnMyLocationButtonClickListener, ResultCallback<Status>
 
-
 {
+    public static final int IMAGE_RED = 0;
+    public static final int IMAGE_ORANGE = 1;
+    public static final int IMAGE_YELLOW = 2;
     private static final String TAG = MapsActivity.class.getSimpleName();
-
     private static final long GEO_DURATION = 60 * 60 * 1000;
     private static final String GEOFENCE_REQ_ID = "My Geofence";
     private static final float GEOFENCE_RADIUS = 100.0f; // in meters
     private static final int REQ_PERMISSION = 999;
     private static final String NOTIFICATION_MSG = "NOTIFICATION MSG";
+    public static TextView log, lat, dist;
+    static int testInt = 0;
+    private static Location lastLocation;
+    private static String distance;
+    private static Location geoLocation;
     private final int UPDATE_INTERVAL = 3 * 60 * 1000;// 3 minutes
     private final int FASTEST_INTERVAL = 30 * 1000;// 30 secs
     private final int GEOFENCE_REQ_CODE = 0;
-    public TextView log, lat, dist;
-    public double distanceInMeters;
-    public double latL;
-    public double lon;
-    public double geoLat;
-    public double geoLon;
     public Marker locationMarker;
-    public double distanceMeters;
+    public String geoFenceAddress;
+    public String  warningLevel;
     protected ArrayList<Geofence> mGeofenceList;
-    private Location mLocation;
+    List geofenceList;
+    boolean shouldUpdateGpsText = true;
+    Object lock;
     private GoogleMap mMap;
     private GoogleApiClient googleApiClient;
-    private Location lastLocation;
     private LocationRequest locationRequest;
-    private FusedLocationProviderApi fusedLocationProviderApi;
     private Marker geoFenceMarker;
     private PendingIntent geoFencePendingIntent;
-    private String distance;
-    private RequestQueue requestQueue;
     private Circle geoFenceLimits;
     private double distan;
-    private  String address;
-    private Location geoLocation;
+    private boolean threadShouldBeRunning = true;
     private TextView warningStreet;
     private ArrayList<LatLng> latLngArrayList;
+    private android.os.Handler handler;
+
+    // Create a Intent send by the notification
+    public static Intent createNotificationIntent(Context context, String msg) {
+        Intent intent = new Intent(context, MapsActivity.class);
+        intent.putExtra(NOTIFICATION_MSG, msg);
+        return intent;
+    }
+
+    //Method to calculate the distance in between the two geo locations
+    private static void getCoordiantesFromGPSAndCalculateDistance(Location lastLocation, Location geoLocation) {
+        float results[] = new float[1];
+        Location.distanceBetween(lastLocation.getLatitude(), lastLocation.getLongitude(), geoLocation.getLatitude(), geoLocation.getLongitude(), results);
+        if (results[0] >= 1000)
+            distance = Float.toString(results[0] / 1000) + " Km";
+        else
+            distance = Float.toString(results[0]) + " m";
+
+//        dist.setText("Distance to destination : " + distance);
+
+        //distance = lastLocation.distanceTo(geoLocation);
 
 
+    }
 
+    public static synchronized void updateDistance() {
+        getCoordiantesFromGPSAndCalculateDistance(lastLocation, geoLocation);
+        Log.e(TAG, "count distance6666" + distance);
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+        lock = new Object();
+
         setContentView(R.layout.activity_maps);
         // Obtain the SupportMapFragment and get notified when the map is ready to be used.
         SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager().findFragmentById(map);
@@ -114,26 +140,18 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
 
         initialized();
         createGoogleApi();
-    }
 
-    // Create a Intent send by the notification
-    public static Intent createNotificationIntent(Context context, String msg) {
-        Intent intent = new Intent(context, MapsActivity.class);
-        intent.putExtra(NOTIFICATION_MSG, msg);
-        return intent;}
+
+    }
 
     // initialized textview and array
-    private void initialized(){
-        log = (TextView) findViewById(R.id.lat);
-        lat = (TextView) findViewById(R.id.lont);
-        dist = (TextView) findViewById(R.id.distance);
+    private void initialized() {
+
         mGeofenceList = new ArrayList<Geofence>();
-        requestQueue = Volley.newRequestQueue(this);
 
     }
 
-
-   // create GoogleApi
+    // create GoogleApi
     private void createGoogleApi() {
         Log.d(TAG, "createGoogleApi()");
         if (googleApiClient == null) {
@@ -154,13 +172,13 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
         mMap.setOnMarkerClickListener(this);
         mMap.setMyLocationEnabled(true);
 
-     // Register the listener with the Location Manager to receive location updates
+
+        // Register the listener with the Location Manager to receive location updates
         if (ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION)
                 != PackageManager.PERMISSION_GRANTED && ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
 
             return;
         }
-
 
 
     }
@@ -208,13 +226,12 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
     @Override
     public void onLocationChanged(Location location) {
         lastLocation = location;
-        markerForLocation(new LatLng(location.getLatitude(),location.getLongitude()));
+        markerForLocation(new LatLng(location.getLatitude(), location.getLongitude()));
         //mMap.addMarker(new MarkerOptions().position(new LatLng(latL,lon)).title("Marker "));
         writeActualLocation(location);
 
 
-
-     }
+    }
 
     private void getLastKnownLocation() {
         Log.d(TAG, "getLastKnownLocation()");
@@ -256,8 +273,6 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
     private void writeActualLocation(Location location) {
         markerForLocation(new LatLng(location.getLatitude(), location.getLongitude()));
 
-        log.setText("Lat: " + location.getLatitude());
-        lat.setText("Long: " + location.getLongitude());
 
 
     }
@@ -323,26 +338,60 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
     public void onMapClick(LatLng latLng) {
         Log.d(TAG, "onMapClick(" + latLng + ")");
 
-        markerForGeofence(latLng);
-        drawGeofence();
-        startGeofence();
-        countDistance(lastLocation,geoLocation);
-        popup();
-
+        populatePositions(latLng);
+        // threadKeeper();
 
 
     }
 
+    private void populatePositions(LatLng tmpLocation) {
+        //LatLng latLng = new LatLng(tmpLocation.latitude, tmpLocation.longitude);
+        //array list to store the temporary locations generated
+        ArrayList<MyLocationList> myGeoLocations = new ArrayList<MyLocationList>();
+        //LatLng latLngTmp = null;
+        Marker myMarker = null;
+
+        int randomInt = (int) (Math.random() * 4);
+
+
+        //following loop generates 5 temporary locations around the central geolocation highlighted on the map
+        // double tmpRandNum ;
+        for (double i = 0; i < 1; i++) {
+
+
+            if (randomInt == 0 || randomInt == 1) //set red when even number 2,4
+                myGeoLocations.add(new MyLocationList(tmpLocation, IMAGE_RED, 1));
+            else if (randomInt == 2) //set blue when odd number 3,5
+                myGeoLocations.add(new MyLocationList(tmpLocation, IMAGE_ORANGE, 2));
+            else // in other cases set color green
+                myGeoLocations.add(new MyLocationList(tmpLocation, IMAGE_YELLOW, 3));
+        }
+
+        //loop through the temporary geo locations created and populate on the map
+        for (int i = 0; i < myGeoLocations.size(); i++) {
+             warningLevel = String.valueOf(myGeoLocations.get(i).getWarningLevel());
+            myMarker = getMarkerForGeofence(myGeoLocations.get(i).getLatLng(),warningLevel);
+
+            drawGeofence(myMarker);
+            startGeofence(myMarker);
+            threadKeeper(popup(getAddress(this, myGeoLocations.get(i).getLatLng().longitude, myGeoLocations.get(i).getLatLng().latitude) + " Warning Level " + warningLevel, myGeoLocations.get(i).getImage()));
+
+        }
+
+
+        getCoordiantesFromGPSAndCalculateDistance(lastLocation, geoLocation);
+    }
 
     // Create a Location Marker
     private void markerForLocation(LatLng latLng) {
         Log.i(TAG, "markerLocation(" + latLng + ")");
-        String title = latLng.latitude + ", " + latLng.longitude;
-        address = getAddress(this,latLng.latitude,latLng.longitude);
-
+        //String title = latLng.latitude + ", " + latLng.longitude;
+        String markerLocationAddress = getAddress(this, latLng.latitude, latLng.longitude);
+        Log.i(TAG, "markerLocationAddress " + markerLocationAddress );
         MarkerOptions markerOptions = new MarkerOptions()
                 .position(latLng)
-                .title(address);
+                .title(markerLocationAddress);
+        
         if (mMap != null) {
             // Remove the anterior marker
             if (locationMarker != null)
@@ -355,50 +404,40 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
         }
     }
 
-    // Create a marker for the geofence creation
-    private void markerForGeofence(LatLng latLng) {
 
+
+
+    private Marker getMarkerForGeofence(LatLng latLng,String warningLevel) {
         Log.i(TAG, "markerForGeofence(" + latLng + ")");
         geoLocation = new Location("geoLocation");
         geoLocation.setLongitude(latLng.longitude);
         geoLocation.setLatitude(latLng.latitude);
-        address = getAddress(this,latLng.latitude,latLng.longitude);
-
+         geoFenceAddress = getAddress(this, latLng.latitude, latLng.longitude);
+        Log.e(TAG, "geoFenceAddress... " + geoFenceAddress );
         // Define marker options
         BitmapDescriptor icon = BitmapDescriptorFactory.fromResource(R.drawable.warning_icon);
         MarkerOptions markerOptions = new MarkerOptions()
 
                 .position(latLng)
                 .icon(icon)
-                .title(address);
-        if (mMap != null) {
+                .title(geoFenceAddress + "  Warning Level  " + warningLevel);
+        /*if (mMap != null) {
             // Remove last geoFenceMarker
-            if(geoFenceMarker != null)
+            if (geoFenceMarker != null)
                 geoFenceMarker.remove();
 
             geoFenceMarker = mMap.addMarker(markerOptions);
-        }
 
-    }
-    //Method to calculate the distance in between the two geo locations
-    private void countDistance(Location lastLocation,Location geoLocation) {
-        float results[] = new float[1];
-        Location.distanceBetween(lastLocation.getLatitude(), lastLocation.getLongitude(), geoLocation.getLatitude(), geoLocation.getLongitude(), results);
-        if(results[0] >= 1000 )
-            distance = Float.toString(results[0]/1000 ) + " Km";
-        else
-            distance = Float.toString(results[0]) + " m";
+        }*/
 
-        dist.setText("Distance to destination : " +  distance );
-
-
-       //distance = lastLocation.distanceTo(geoLocation);
+        geoFenceMarker = mMap.addMarker(markerOptions);
+        return geoFenceMarker;
 
     }
 
     private Geofence createGeofence(LatLng latLng, float radius) {
         Log.d(TAG, "createGeofence");
-        List geofenceList = new ArrayList();
+
         return new Geofence.Builder()
                 .setRequestId(GEOFENCE_REQ_ID)
                 .setCircularRegion(latLng.latitude, latLng.longitude, radius)
@@ -417,8 +456,8 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
                 .setInitialTrigger(GeofencingRequest.INITIAL_TRIGGER_ENTER)
                 .addGeofence(geofence)
                 .build();
-    }
 
+    }
 
     private PendingIntent createGeofencePendingIntent() {
         Log.d(TAG, "createGeofencePendingIntent");
@@ -430,7 +469,6 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
                 this, GEOFENCE_REQ_CODE, intent, PendingIntent.FLAG_UPDATE_CURRENT);
     }
 
-
     // Add the created GeofenceRequest to the device's monitoring list
     private void addGeofence(GeofencingRequest request) {
         Log.d(TAG, "addGeofence");
@@ -439,27 +477,29 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
                     googleApiClient,
                     request,
                     createGeofencePendingIntent()
-            ).setResultCallback(MapsActivity.this);
+            ).setResultCallback(new ResultCallback<Status>() {
+                @Override
+                public void onResult(@NonNull Status status) {
+                    Log.d(TAG, "STATUS" + status.getStatus());
+                }
+            });
     }
-
 
     @Override
     public void onResult(@NonNull Status status) {
         Log.i(TAG, "onResult: " + status);
         if (status.isSuccess()) {
-            drawGeofence();
+            //drawGeofence();
             //  startGeofence();
         } else {
             // inform about fail
         }
     }
 
+    private void drawGeofence(Marker geoFenceMarker) {
 
-    private void drawGeofence() {
-        Log.d(TAG, "drawGeofence()1234567788899");
-
-        if (geoFenceLimits != null)
-            geoFenceLimits.remove();
+        //if (geoFenceLimits != null)
+        //    geoFenceLimits.remove();
 
         CircleOptions circleOptions = new CircleOptions()
                 .center(geoFenceMarker.getPosition())
@@ -470,8 +510,7 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
 
     }
 
-
-    private void startGeofence() {
+    private void startGeofence(Marker geoFenceMarker) {
         Log.i(TAG, "startGeofence()");
         if (geoFenceMarker != null) {
             Geofence geofence = createGeofence(geoFenceMarker.getPosition(), GEOFENCE_RADIUS);
@@ -482,12 +521,13 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
         }
     }
 
-    public String getAddress(Context ctx,double latL, double lon){
-        String fullAdd =null;
+    public String getAddress(Context ctx, double latL, double lon) {
+        String fullAdd = null;
+        Log.e(TAG, "getAddress......" +latL +lon);
         Geocoder geocoder = new Geocoder(ctx, Locale.getDefault());
         try {
-            List <android.location.Address> addresses =geocoder.getFromLocation(latL,lon,1);
-            if(addresses.size()>0){
+            List<android.location.Address> addresses = geocoder.getFromLocation(latL, lon, 1);
+            if (addresses.size() > 0) {
                 android.location.Address address = addresses.get(0);
                 fullAdd = address.getAddressLine(0);
             }
@@ -496,25 +536,179 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
             e.printStackTrace();
 
         }
-
+        Log.e(TAG, "full....getAddress......" +fullAdd);
 
         return fullAdd;
     }
 
-    public void popup(){
-        PopupWarning popupWarning= new PopupWarning();
-        popupWarning.show(getSupportFragmentManager(),"popup warning");
+    public AlertDialog popup(String address, int whichImage) {
+        AlertDialog dialog = showPopupFromMainActivity();
+
+        dialog.show();
+        TextView countDone = (TextView) dialog.findViewById(R.id.countDown);
+        countDone.setText(distance);
+        warningStreet = (TextView) dialog.findViewById(R.id.warningStreet);
+        warningStreet.setText("Warning Street:  " + geoFenceAddress  );
+        TextView warningLev =(TextView)dialog.findViewById(R.id.warningLevel);
+        warningLev.setText("Warning Level "+warningLevel);
+
+        Log.e(TAG, "address........" +address);
+
+        ImageView imageView = (ImageView) dialog.findViewById(R.id.imageView);
+        if (imageView != null) {
+            switch (whichImage) {
+                case IMAGE_RED:
+                    imageView.setImageResource(R.drawable.ic_launcher_red);
+                    //imageView.setImageDrawable();
+                    break;
+
+                case IMAGE_ORANGE:
+                    imageView.setImageResource(R.drawable.orange);
+                    break;
+
+                case IMAGE_YELLOW:
+                    imageView.setImageResource(R.drawable.ic_launcher_yellow);
+                    break;
+            }
+        }
+
+        //PopupWarning popupWarning = new PopupWarning();
+        //popupWarning.show(getSupportFragmentManager(), "popup warning");
 
         Bundle args = new Bundle();
-        args.putString("key",address);
+        args.putString("key", address);
+        //popupWarning.setArguments(args);
 
-        popupWarning.setArguments(args);
-
-
+        return dialog;
 
     }
 
+    public AlertDialog showPopupFromMainActivity() {
+        LayoutInflater inflater;
+        View view;
+        TextView warningStreet;
+        String strtext;
+        Button btnOk;
+        TextView countDone;
+
+        String countDoneText;
+        String dataPoint;
+
+        double longitude, latiitude;
+
+
+        inflater = this.getLayoutInflater();
+        view = inflater.inflate(R.layout.activity_popup_warning, null);
+        if (view == null) {
+            Log.d("ouch", "view was null");
+        }
+
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        //get arguments from the bundle
+        //Bundle mArgs = getArguments();
+        //String key = mArgs.getString("key");
+        //longitude = mArgs.getDouble("longitude");
+        //latiitude = mArgs.getDouble("latitude");
+
+
+        btnOk = (Button) view.findViewById(R.id.btnOk);
+
+        countDone = (TextView) view.findViewById(R.id.countDown);
+        //countDone.setText(dataPoint.getS());
+        // Log.e(TAG, "count distance5555 " + dataPoint.getS());
+
+
+        final AlertDialog d = builder.setView(view).create();
+        btnOk.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                // When button is clicked, call up to owning activity.
+                d.dismiss();
+            }
+        });
+        return d;
+    }
+
+    public void updateDistanceThread(final AlertDialog alertDialog) {
+        final Thread thread = new Thread(new Runnable() {
+
+
+            @Override
+            public void run() {
+
+
+                updateDistance();
+
+
+                //TODO stop this from spamming updates if coordinate has not changed
+                runOnUiThread(new Runnable() {
+                    @Override
+                    public void run() {
+
+                        if (alertDialog != null && alertDialog.isShowing()) {
+                            TextView countDone = (TextView) alertDialog.findViewById(R.id.countDown);
+                            countDone.setText(distance);
+                            Log.e(TAG, "count distance4444" + distance);
+                            synchronized (lock) {
+                                lock.notify();
+                            }
+                        } else {
+                            shouldUpdateGpsText = false;
+                        }
+                    }
+                });
+            }
+
+        });
+        thread.start();
+
+    }
+
+
+    public void threadKeeper(final AlertDialog alertDialog) {
+
+        final Thread thread2 = new Thread(new Runnable() {
+            @Override
+            public void run() {
+                while (shouldUpdateGpsText) {
+                    runOnUiThread(new Runnable() {
+                        @Override
+                        public void run() {
+                            updateDistanceThread(alertDialog);
+                        }
+                    });
+                    try {
+                        synchronized (lock) {
+                            lock.wait();
+                        }
+                    } catch (InterruptedException e) {
+
+                    }
+
+                }
+//                if (d != null && d.isShowing()){
+//                    TextView countDone = (TextView)d.findViewById(R.id.countDown);
+//                    countDone.setText(distance);
+//                    Log.e(TAG, "count distance4444" + distance);
+//                }
+                //PopupWarning.dataPoint.setS("" + distance);
+            }
+        });
+
+        thread2.start();
+    }
+
 }
+
+
+
+
+
+
+
+
+
+
+
 
 
 

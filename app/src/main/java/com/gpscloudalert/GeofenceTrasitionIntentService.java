@@ -21,7 +21,6 @@ import com.google.android.gms.location.GeofencingEvent;
 import java.util.ArrayList;
 import java.util.List;
 
-import static com.gpscloudalert.MapsActivity.createNotificationIntent;
 
 public class GeofenceTrasitionIntentService extends IntentService {
 
@@ -54,7 +53,11 @@ public class GeofenceTrasitionIntentService extends IntentService {
 
             // Send notification details as a String
             sendNotification( geofenceTransitionDetails );
+//            showPopUp(geofenceTransitionDetails);
+
+
         }
+
     }
 
 
@@ -67,10 +70,13 @@ public class GeofenceTrasitionIntentService extends IntentService {
 
         String status = null;
         if ( geoFenceTransition == Geofence.GEOFENCE_TRANSITION_ENTER )
+
             status = "Entering ";
+
         else if ( geoFenceTransition == Geofence.GEOFENCE_TRANSITION_EXIT )
             status = "Exiting ";
         return status + TextUtils.join( ", ", triggeringGeofencesList);
+
     }
 
     private void sendNotification( String msg ) {
@@ -94,6 +100,7 @@ public class GeofenceTrasitionIntentService extends IntentService {
                 GEOFENCE_NOTIFICATION_ID,
                 createNotification(msg, notificationPendingIntent));
 
+
     }
 
     // Create notification
@@ -107,6 +114,7 @@ public class GeofenceTrasitionIntentService extends IntentService {
                 .setContentIntent(notificationPendingIntent)
                 .setDefaults(Notification.DEFAULT_LIGHTS | Notification.DEFAULT_VIBRATE | Notification.DEFAULT_SOUND)
                 .setAutoCancel(true);
+
         return notificationBuilder.build();
     }
 
@@ -126,5 +134,8 @@ public class GeofenceTrasitionIntentService extends IntentService {
         }
     }
 
-
+//private void showPopUp(String msg){
+//    MapsActivity popup = new MapsActivity();
+//    popup.showPopupFromMainActivity();
+//}
 }

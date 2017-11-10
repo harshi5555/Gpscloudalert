@@ -15,12 +15,12 @@ public class Constants {
     public static final HashMap<String, LatLng> LANDMARKS = new HashMap<String, LatLng>();
     static {
 
-        LANDMARKS.put("Moscone South", new LatLng(59.535348,18.086131));
+        LANDMARKS.put("a", new LatLng(59.535348,18.086131));
 
         //
-        LANDMARKS.put("Japantown", new LatLng(59.334961,18.05761));
+        LANDMARKS.put("e", new LatLng(59.334961,18.05761));
 
         //
-        LANDMARKS.put("SFO", new LatLng(59.335962,18.057827));
+        LANDMARKS.put("d", new LatLng(59.335962,18.057827));
     }
 }
