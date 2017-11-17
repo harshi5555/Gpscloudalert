@@ -2,8 +2,10 @@ package com.gpscloudalert;
 
 import android.Manifest;
 import android.app.PendingIntent;
+import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
+import android.content.IntentFilter;
 import android.content.pm.PackageManager;
 import android.graphics.Color;
 import android.location.Geocoder;
@@ -15,6 +17,7 @@ import com.google.android.gms.location.Geofence;
 import com.google.android.gms.location.GeofencingRequest;
 import com.google.android.gms.location.LocationListener;
 
+import android.os.Handler;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.v4.app.ActivityCompat;
@@ -52,6 +55,7 @@ import java.util.List;
 import java.util.Locale;
 
 
+import static com.gpscloudalert.R.id.harshi;
 import static com.gpscloudalert.R.id.map;
 
 
@@ -97,7 +101,20 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
     private boolean threadShouldBeRunning = true;
     private TextView warningStreet;
     private ArrayList<LatLng> latLngArrayList;
-    private android.os.Handler handler;
+
+    public Context context;
+    public static final String MYFILTER = "com.gpscloudalert.RECEIVER";
+    public static final String MSG = "_message";
+    private  BroadcastReceiver myReceiver;
+    private String  value;
+    private TextView harshi1;
+
+
+
+
+
+
+
 
     // Create a Intent send by the notification
     public static Intent createNotificationIntent(Context context, String msg) {
@@ -106,32 +123,20 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
         return intent;
     }
 
-    //Method to calculate the distance in between the two geo locations
-    private static void getCoordiantesFromGPSAndCalculateDistance(Location lastLocation, Location geoLocation) {
-        float results[] = new float[1];
-        Location.distanceBetween(lastLocation.getLatitude(), lastLocation.getLongitude(), geoLocation.getLatitude(), geoLocation.getLongitude(), results);
-        if (results[0] >= 1000)
-            distance = Float.toString(results[0] / 1000) + " Km";
-        else
-            distance = Float.toString(results[0]) + " m";
 
-//        dist.setText("Distance to destination : " + distance);
-
-        //distance = lastLocation.distanceTo(geoLocation);
-
-
-    }
-
-    public static synchronized void updateDistance() {
-        getCoordiantesFromGPSAndCalculateDistance(lastLocation, geoLocation);
-        Log.e(TAG, "count distance6666" + distance);
-    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
+
+        context = this;
         lock = new Object();
+        Intent startService1 = new Intent(MapsActivity.this,GeofenceTrasitionIntentService.class);
+        startService(startService1);
+        Log.d(TAG, "startService1");
+
+
 
         setContentView(R.layout.activity_maps);
         // Obtain the SupportMapFragment and get notified when the map is ready to be used.
@@ -141,13 +146,48 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
         initialized();
         createGoogleApi();
 
+        myReceiver = new BroadcastReceiver() {
+            @Override
+            public void onReceive(Context context, Intent intent) {
+                Log.e("broadcast","receiving");
+               Bundle bundle = intent.getExtras();
+              Log.d(TAG, "Inside broadcast recevier ");
+               if(bundle !=null){
+                    String  value =  bundle.getString(MSG);
 
-    }
+                    Log.d(TAG, "value"+value);
+
+                }
+               else {
+
+                    Log.i(TAG, "value not found");
+
+                }
+
+           }
+
+
+        };
+
+       IntentFilter filter = new IntentFilter();
+       filter.addAction(MYFILTER);
+          registerReceiver(myReceiver,filter);
+   }
+   @Override
+   protected void onDestroy(){
+       //TODO unregister the receiver
+        super.onDestroy();
+        unregisterReceiver(myReceiver);
+  }
+
+
+
 
     // initialized textview and array
     private void initialized() {
 
         mGeofenceList = new ArrayList<Geofence>();
+         harshi1 = (TextView)findViewById(R.id.harshi);
 
     }
 
@@ -221,6 +261,29 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
         super.onStop();
         // Disconnect GoogleApiClient when stopping Activity
         googleApiClient.disconnect();
+    }
+    //Method to calculate the distance in between the two geo locations
+    private static void getCoordiantesFromGPSAndCalculateDistance(Location lastLocation, Location geoLocation) {
+        float results[] = new float[1];
+        Location.distanceBetween(lastLocation.getLatitude(), lastLocation.getLongitude(), geoLocation.getLatitude(), geoLocation.getLongitude(), results);
+        if (results[0] >= 1000)
+            distance = Float.toString(results[0] / 1000) + " Km";
+        else
+            distance = Float.toString(results[0]) + " m";
+
+//        dist.setText("Distance to destination : " + distance);
+
+        //distance = lastLocation.distanceTo(geoLocation);
+
+
+    }
+
+
+
+
+    public static synchronized void updateDistance() {
+        getCoordiantesFromGPSAndCalculateDistance(lastLocation, geoLocation);
+        Log.e(TAG, "count distance6666" + distance);
     }
 
     @Override
@@ -374,7 +437,7 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
 
             drawGeofence(myMarker);
             startGeofence(myMarker);
-            threadKeeper(popup(getAddress(this, myGeoLocations.get(i).getLatLng().longitude, myGeoLocations.get(i).getLatLng().latitude) + " Warning Level " + warningLevel, myGeoLocations.get(i).getImage()));
+//            threadKeeper(popup(getAddress(this, myGeoLocations.get(i).getLatLng().longitude, myGeoLocations.get(i).getLatLng().latitude) + " Warning Level " + warningLevel, myGeoLocations.get(i).getImage()));
 
         }
 
@@ -541,9 +604,10 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
         return fullAdd;
     }
 
-    public AlertDialog popup(String address, int whichImage) {
+    public  AlertDialog popup(String address, int whichImage) {
         AlertDialog dialog = showPopupFromMainActivity();
 
+        //dialog.notify(GeofenceTrasitionIntentService.GEOFENCE_NOTIFICATION_ID,createNotificationIntent(value,geoFencePendingIntent);
         dialog.show();
         TextView countDone = (TextView) dialog.findViewById(R.id.countDown);
         countDone.setText(distance);
@@ -582,6 +646,8 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
         return dialog;
 
     }
+
+
 
     public AlertDialog showPopupFromMainActivity() {
         LayoutInflater inflater;

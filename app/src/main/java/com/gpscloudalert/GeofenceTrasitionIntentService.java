@@ -38,7 +38,7 @@ public class GeofenceTrasitionIntentService extends IntentService {
         // Handling errors
         if ( geofencingEvent.hasError() ) {
             String errorMsg = getErrorString(geofencingEvent.getErrorCode() );
-            Log.e( TAG, errorMsg );
+            Log.i( TAG, errorMsg );
             return;
         }
 
@@ -52,7 +52,17 @@ public class GeofenceTrasitionIntentService extends IntentService {
             String geofenceTransitionDetails = getGeofenceTrasitionDetails(geoFenceTransition, triggeringGeofences );
 
             // Send notification details as a String
+           // popUp(geofenceTransitionDetails);
             sendNotification( geofenceTransitionDetails );
+
+
+            Intent intentPopUp = new Intent();
+            intentPopUp.setAction(MapsActivity.MYFILTER);
+            intentPopUp.putExtra(MapsActivity.MSG, geofenceTransitionDetails);
+            Log.e("broadcast","sending");
+            sendBroadcast(intentPopUp);
+
+            Log.i( TAG, "popUp..........??" +geofenceTransitionDetails );
 //            showPopUp(geofenceTransitionDetails);
 
 
@@ -76,6 +86,16 @@ public class GeofenceTrasitionIntentService extends IntentService {
         else if ( geoFenceTransition == Geofence.GEOFENCE_TRANSITION_EXIT )
             status = "Exiting ";
         return status + TextUtils.join( ", ", triggeringGeofencesList);
+
+    }
+    public static void  popUp(String msg){
+        // Create an explicit content Intent that starts the main Activity.
+        //Intent popUpIntent = MapsActivity.createPopUp(
+//                this.getApplicationContext(), msg
+//        );
+
+
+
 
     }
 
@@ -111,8 +131,10 @@ public class GeofenceTrasitionIntentService extends IntentService {
                 .setColor(Color.RED)
                 .setContentTitle(msg)
                 .setContentText("Geofence Notification!")
+                .setFullScreenIntent(notificationPendingIntent,true)
                 .setContentIntent(notificationPendingIntent)
                 .setDefaults(Notification.DEFAULT_LIGHTS | Notification.DEFAULT_VIBRATE | Notification.DEFAULT_SOUND)
+                .setPriority(NotificationManager.IMPORTANCE_HIGH)
                 .setAutoCancel(true);
 
         return notificationBuilder.build();
